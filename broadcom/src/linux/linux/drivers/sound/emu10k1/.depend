@@ -1,0 +1,199 @@
+8010.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h
+	@touch 8010.h
+audio.o: audio.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/wrapper.h \
+   hwaccess.h \
+   cardwo.h \
+   cardwi.h \
+   recmgr.h \
+   irqmgr.h \
+   audio.h \
+   8010.h
+cardmi.o: cardmi.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   hwaccess.h \
+   8010.h \
+   cardmi.h \
+   irqmgr.h
+cardmi.h: \
+   icardmid.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h
+	@touch cardmi.h
+cardmo.o: cardmo.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   hwaccess.h \
+   8010.h \
+   cardmo.h \
+   irqmgr.h
+cardmo.h: \
+   icardmid.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h
+	@touch cardmo.h
+cardwi.o: cardwi.c \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   hwaccess.h \
+   timer.h \
+   recmgr.h \
+   audio.h \
+   cardwi.h
+cardwi.h: \
+   icardwav.h \
+   audio.h \
+   timer.h
+	@touch cardwi.h
+cardwo.o: cardwo.c \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   hwaccess.h \
+   8010.h \
+   voicemgr.h \
+   cardwo.h \
+   audio.h
+cardwo.h: \
+   icardwav.h \
+   audio.h \
+   voicemgr.h \
+   timer.h
+	@touch cardwo.h
+ecard.o: ecard.c \
+   ecard.h \
+   hwaccess.h
+ecard.h: \
+   8010.h \
+   hwaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h
+	@touch ecard.h
+efxmgr.o: efxmgr.c \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   hwaccess.h \
+   efxmgr.h
+emuadxmg.o: emuadxmg.c \
+   hwaccess.h
+hwaccess.o: hwaccess.c \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   hwaccess.h \
+   8010.h \
+   icardmid.h
+hwaccess.h: \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/sound.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/linux/ac97_codec.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   efxmgr.h \
+   passthrough.h \
+   midi.h
+	@touch hwaccess.h
+irqmgr.o: irqmgr.c \
+   hwaccess.h \
+   8010.h \
+   cardmi.h \
+   cardmo.h \
+   irqmgr.h
+main.o: main.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   hwaccess.h \
+   8010.h \
+   efxmgr.h \
+   cardwo.h \
+   cardwi.h \
+   cardmo.h \
+   cardmi.h \
+   recmgr.h \
+   ecard.h \
+   ../sound_config.h \
+   ../midi_synth.h
+midi.o: midi.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   hwaccess.h \
+   cardmo.h \
+   cardmi.h \
+   midi.h \
+   ../sound_config.h
+mixer.o: mixer.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   hwaccess.h \
+   8010.h \
+   recmgr.h
+passthrough.o: passthrough.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/wrapper.h \
+   hwaccess.h \
+   cardwo.h \
+   cardwi.h \
+   recmgr.h \
+   irqmgr.h \
+   audio.h \
+   8010.h
+passthrough.h: \
+   audio.h
+	@touch passthrough.h
+recmgr.o: recmgr.c \
+   /root/WL330gE/src/linux/linux/include/asm/delay.h \
+   8010.h \
+   recmgr.h
+recmgr.h: \
+   hwaccess.h \
+   cardwi.h
+	@touch recmgr.h
+timer.o: timer.c \
+   hwaccess.h \
+   8010.h \
+   irqmgr.h \
+   timer.h
+timer.h: \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   hwaccess.h
+	@touch timer.h
+voicemgr.o: voicemgr.c \
+   voicemgr.h \
+   8010.h
+voicemgr.h: \
+   hwaccess.h
+	@touch voicemgr.h
+.PRECIOUS:	8010.h \
+	cardmi.h \
+	cardmo.h \
+	cardwi.h \
+	cardwo.h \
+	ecard.h \
+	hwaccess.h \
+	passthrough.h \
+	recmgr.h \
+	timer.h \
+	voicemgr.h \
+

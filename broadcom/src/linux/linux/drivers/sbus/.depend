@@ -1,0 +1,20 @@
+dvma.o: dvma.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun4.h)
+sbus.o: sbus.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun/auxio.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h)

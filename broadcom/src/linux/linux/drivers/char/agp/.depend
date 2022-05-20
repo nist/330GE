@@ -1,0 +1,58 @@
+agpgart_be.o: agpgart_be.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/linux/agp_backend.h \
+   agp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smp.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/x86.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/i810.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/intel.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/via.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/sis.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/amd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/amd/8151.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/ali.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/sworks.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/agp/hp/zx1.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/gart/iommu.h)
+agpgart_fe.o: agpgart_fe.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/agp_backend.h \
+   /root/WL330gE/src/linux/linux/include/linux/agpgart.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/mman.h \
+   agp.h

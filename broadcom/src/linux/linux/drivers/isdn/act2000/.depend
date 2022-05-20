@@ -1,0 +1,38 @@
+act2000.h: \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/mman.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdnif.h
+	@touch act2000.h
+act2000_isa.o: act2000_isa.c \
+   act2000.h \
+   act2000_isa.h \
+   capi.h
+capi.o: capi.c \
+   act2000.h \
+   capi.h
+module.o: module.c \
+   act2000.h \
+   act2000_isa.h \
+   capi.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h
+.PRECIOUS:	act2000.h \
+

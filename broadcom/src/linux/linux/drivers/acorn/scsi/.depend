@@ -1,0 +1,206 @@
+acornscsi.o: acornscsi.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   ../../scsi/constants.h \
+   acornscsi.h \
+   msgqueue.h \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/scsi/acornscsi/link.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/acornscsi/constants.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/scsi/acornscsi/tagged/queue.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/scsi/acornscsi/sync.h)
+acornscsi.h: \
+   queue.h \
+   msgqueue.h
+	@touch acornscsi.h
+acornscsi-io.o: acornscsi-io.S \
+   /root/WL330gE/src/linux/linux/include/linux/linkage.h
+arxescsi.o: arxescsi.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   ../../scsi/sd.h \
+   ../../scsi/hosts.h \
+   arxescsi.h \
+   fas216.h
+arxescsi.h: \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h \
+   fas216.h
+	@touch arxescsi.h
+cumana_1.o: cumana_1.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   ../../scsi/constants.h \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h \
+   ../../scsi/NCR5380.h \
+   ../../scsi/NCR5380.c
+cumana_2.o: cumana_2.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   ../../scsi/sd.h \
+   ../../scsi/hosts.h \
+   fas216.h \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h
+ecoscsi.o: ecoscsi.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   ../../scsi/NCR5380.h \
+   ../../scsi/constants.h \
+   ../../scsi/NCR5380.c
+eesox.o: eesox.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   ../../scsi/sd.h \
+   ../../scsi/hosts.h \
+   fas216.h \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h
+fas216.o: fas216.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   fas216.h
+fas216.h: \
+   queue.h \
+   msgqueue.h
+	@touch fas216.h
+msgqueue.o: msgqueue.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/stddef.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   msgqueue.h
+oak.o: oak.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   ../../scsi/constants.h \
+   ../../scsi/NCR5380.h \
+   ../../scsi/NCR5380.c
+powertec.o: powertec.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   ../../scsi/sd.h \
+   ../../scsi/hosts.h \
+   fas216.h \
+   /root/WL330gE/src/linux/linux/include/scsi/scsicam.h
+queue.o: queue.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   ../../scsi/scsi.h \
+   queue.h
+.PRECIOUS:	acornscsi.h \
+	arxescsi.h \
+	fas216.h \
+

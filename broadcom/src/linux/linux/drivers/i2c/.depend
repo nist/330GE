@@ -1,0 +1,170 @@
+i2c-adap-ite.o: i2c-adap-ite.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-ite.h \
+   i2c-ite.h
+i2c-algo-bit.o: i2c-algo-bit.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-bit.h
+i2c-algo-ite.o: i2c-algo-ite.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-ite.h \
+   i2c-ite.h
+i2c-algo-pcf.o: i2c-algo-pcf.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-pcf.h \
+   i2c-pcf8584.h
+i2c-core.o: i2c-core.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/chardev.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/algobit.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/philipspar.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/elv.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/velleman.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/bitvia.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/algopcf.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/elektor.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/algo8xx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/rpxlite.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/i2c/proc.h)
+i2c-dev.o: i2c-dev.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-dev.h
+i2c-elektor.o: i2c-elektor.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-pcf.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-elektor.h \
+   i2c-pcf8584.h
+i2c-elv.o: i2c-elv.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-bit.h
+i2c-ite.h: \
+   /root/WL330gE/src/linux/linux/include/asm/it8172/it8172.h
+	@touch i2c-ite.h
+i2c-keywest.o: i2c-keywest.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/completion.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   i2c-keywest.h
+i2c-philips-par.o: i2c-philips-par.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/stddef.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-bit.h
+i2c-proc.o: i2c-proc.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-proc.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h
+i2c-velleman.o: i2c-velleman.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-algo-bit.h
+.PRECIOUS:	i2c-ite.h \
+

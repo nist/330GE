@@ -1,0 +1,138 @@
+isense.o: isense.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/asm/spinlock.h \
+   mptbase.h \
+   isense.h \
+   ascq_tbl.c \
+   scsiops.c
+isense.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   scsi3.h
+	@touch isense.h
+linux_compat.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h
+	@touch linux_compat.h
+mptbase.o: mptbase.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/kdev_t.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   mptbase.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+mptbase.h: \
+   linux_compat.h \
+   scsi3.h \
+   lsi/mpi_type.h \
+   lsi/mpi.h \
+   lsi/mpi_ioc.h \
+   lsi/mpi_cnfg.h \
+   lsi/mpi_init.h \
+   lsi/mpi_lan.h \
+   lsi/mpi_raid.h \
+   lsi/mpi_fc.h \
+   lsi/mpi_targ.h \
+   lsi/fc_log.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h
+	@touch mptbase.h
+mptctl.o: mptctl.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/kdev_t.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   mptbase.h \
+   mptctl.h
+mptctl.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h
+	@touch mptctl.h
+mptlan.o: mptlan.c \
+   mptlan.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h
+mptlan.h: \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   mptbase.h
+	@touch mptlan.h
+mptscsih.o: mptscsih.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kdev_t.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/reboot.h \
+   ../../scsi/scsi.h \
+   ../../scsi/hosts.h \
+   ../../scsi/sd.h \
+   mptbase.h \
+   mptscsih.h \
+   isense.h \
+   ../../scsi/scsi_module.c
+mptscsih.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h
+	@touch mptscsih.h
+scsi3.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h
+	@touch scsi3.h
+.PRECIOUS:	isense.h \
+	linux_compat.h \
+	mptbase.h \
+	mptctl.h \
+	mptlan.h \
+	mptscsih.h \
+	scsi3.h \
+

@@ -1,0 +1,66 @@
+e1000_ethtool.o: e1000_ethtool.c \
+   e1000.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h
+e1000.h: \
+   /root/WL330gE/src/linux/linux/include/linux/stddef.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/tcp.h \
+   /root/WL330gE/src/linux/linux/include/linux/udp.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h \
+   /root/WL330gE/src/linux/linux/include/linux/reboot.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/ethtool.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_vlan.h \
+   e1000_hw.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+	@touch e1000.h
+e1000_hw.o: e1000_hw.c \
+   e1000_hw.h
+e1000_hw.h: \
+   e1000_osdep.h
+	@touch e1000_hw.h
+e1000_main.o: e1000_main.c \
+   e1000.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h)
+e1000_osdep.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h
+	@touch e1000_osdep.h
+e1000_param.o: e1000_param.c \
+   e1000.h
+e1000_proc.o: e1000_proc.c \
+   e1000.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h
+.PRECIOUS:	e1000.h \
+	e1000_hw.h \
+	e1000_osdep.h \
+

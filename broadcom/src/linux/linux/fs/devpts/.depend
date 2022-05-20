@@ -1,0 +1,29 @@
+devpts_i.h: \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/devpts_fs.h
+	@touch devpts_i.h
+inode.o: inode.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kdev_t.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   devpts_i.h
+root.o: root.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/param.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   devpts_i.h
+.PRECIOUS:	devpts_i.h \
+

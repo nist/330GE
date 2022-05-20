@@ -1,0 +1,71 @@
+attribute.o: attribute.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   befs_fs.h \
+   endian.h
+befs_fs.h: \
+   befs_fs_types.h \
+   compatibility.h
+	@touch befs_fs.h
+befs_fs_types.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h
+	@touch befs_fs_types.h
+btree.o: btree.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   befs_fs.h \
+   endian.h
+compatibility.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h
+	@touch compatibility.h
+datastream.o: datastream.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   befs_fs.h \
+   endian.h
+debug.o: debug.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   befs_fs.h \
+   endian.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/befs/debug.h)
+endian.h: \
+   /root/WL330gE/src/linux/linux/include/linux/byteorder/generic.h \
+   befs_fs.h
+	@touch endian.h
+inode.o: inode.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   befs_fs.h \
+   endian.h
+io.o: io.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   befs_fs.h
+linuxvfs.o: linuxvfs.c \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/nls.h \
+   befs_fs.h \
+   endian.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/befs/rw.h)
+super.o: super.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   befs_fs.h \
+   endian.h
+.PRECIOUS:	befs_fs.h \
+	befs_fs_types.h \
+	compatibility.h \
+	endian.h \
+

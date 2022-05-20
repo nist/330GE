@@ -1,0 +1,384 @@
+datagram.o: datagram.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/highmem.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h
+dev.o: dev.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/notifier.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/brlock.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/divert.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h \
+   /root/WL330gE/src/linux/linux/include/net/profile.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/linux/highmem.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/radio.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/pcmcia/radio.h) \
+   /root/WL330gE/src/linux/linux/include/linux/wireless.h \
+   /root/WL330gE/src/linux/linux/include/net/iw_handler.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/plip.h) \
+   /root/WL330gE/src/include/bcmnvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/hotplug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/fastroute.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kmod.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/highmem.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/hw/flowcontrol.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bcm4710.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bridge.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bridge/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/divert.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/profile.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/sched.h)
+dev_mcast.o: dev_mcast.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/net/ip.h \
+   /root/WL330gE/src/linux/linux/include/net/route.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/arp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+dst.o: dst.c \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h
+dv.o: dv.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/udp.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h \
+   /root/WL330gE/src/linux/linux/include/net/arp.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/ipv6.h \
+   /root/WL330gE/src/linux/linux/include/net/ip.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/checksum.h \
+   /root/WL330gE/src/linux/linux/include/linux/divert.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h
+filter.o: filter.c \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/filter.h) \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_packet.h \
+   /root/WL330gE/src/linux/linux/include/net/ip.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/filter.h
+iovec.o: iovec.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/in6.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h
+neighbour.o: neighbour.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/net/neighbour.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arpd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smp.h)
+netfilter.o: netfilter.c \
+   /root/WL330gE/src/linux/linux/include/linux/netfilter.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/if.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/brlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/route.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/netfilter/debug.h) \
+   /root/WL330gE/src/linux/linux/include/net/ip.h \
+   /root/WL330gE/src/linux/linux/include/net/route.h \
+   /root/WL330gE/src/linux/linux/include/net/tcp.h \
+   /root/WL330gE/src/linux/linux/include/linux/netfilter_ipv4.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/inet.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ip/route/fwmark.h)
+pktgen.o: pktgen.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/udp.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/asm/timex.h
+profile.o: profile.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/asm/processor.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/net/profile.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/profile.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+rtnetlink.o: rtnetlink.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/net/ip.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/net/arp.h \
+   /root/WL330gE/src/linux/linux/include/net/route.h \
+   /root/WL330gE/src/linux/linux/include/net/udp.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h
+scm.o: scm.c \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/file.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/scm.h
+skbuff.o: skbuff.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/cache.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/highmem.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/netfilter.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/netfilter/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/sched.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/hippi.h)
+sock.o: sock.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/tcp.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/net/protocol.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/ipsec.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/filter.h) \
+   /root/WL330gE/src/linux/linux/include/linux/filter.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/inet.h) \
+   /root/WL330gE/src/linux/linux/include/net/tcp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/netdevices.h)
+sysctl_net_core.o: sysctl_net_core.c \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/divert.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/fastroute.h)
+utils.o: utils.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h
+wireless.o: wireless.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/wireless.h \
+   /root/WL330gE/src/linux/linux/include/net/iw_handler.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)

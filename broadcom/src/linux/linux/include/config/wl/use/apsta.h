@@ -1,0 +1,1 @@
+#define CONFIG_WL_USE_APSTA 1

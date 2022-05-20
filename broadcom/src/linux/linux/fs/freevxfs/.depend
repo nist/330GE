@@ -1,0 +1,72 @@
+vxfs_bmap.o: vxfs_bmap.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   vxfs.h \
+   vxfs_inode.h
+vxfs_fshead.o: vxfs_fshead.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   vxfs.h \
+   vxfs_inode.h \
+   vxfs_extern.h \
+   vxfs_fshead.h
+vxfs.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   vxfs_kcompat.h
+	@touch vxfs.h
+vxfs_immed.o: vxfs_immed.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   vxfs.h \
+   vxfs_inode.h
+vxfs_inode.o: vxfs_inode.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   vxfs.h \
+   vxfs_inode.h \
+   vxfs_extern.h
+vxfs_kcompat.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h
+	@touch vxfs_kcompat.h
+vxfs_lookup.o: vxfs_lookup.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/highmem.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   vxfs.h \
+   vxfs_dir.h \
+   vxfs_inode.h \
+   vxfs_extern.h
+vxfs_olt.o: vxfs_olt.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   vxfs.h \
+   vxfs_olt.h
+vxfs_subr.o: vxfs_subr.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   vxfs_kcompat.h \
+   vxfs_extern.h
+vxfs_super.o: vxfs_super.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   vxfs.h \
+   vxfs_extern.h \
+   vxfs_dir.h \
+   vxfs_inode.h
+.PRECIOUS:	vxfs.h \
+	vxfs_kcompat.h \
+

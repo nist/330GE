@@ -1,0 +1,3 @@
+1. uuencode, to file.
+2. syslog, skip some messages and log to files
+3. klog, 

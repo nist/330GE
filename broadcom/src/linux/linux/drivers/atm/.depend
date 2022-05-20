@@ -1,0 +1,377 @@
+ambassador.o: ambassador.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   ambassador.h
+ambassador.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/ambassador/debug.h)
+	@touch ambassador.h
+atmdev_init.o: atmdev_init.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/zatm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/nicstar.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/ambassador.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/horizon.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/ia.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/lanai.h)
+atmtcp.o: atmtcp.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_tcp.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h
+eni.o: eni.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_eni.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   tonga.h \
+   midway.h \
+   suni.h \
+   eni.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/tune/burst.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/rx/16w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/rx/8w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/rx/4w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/rx/2w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/tx/16w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/tx/8w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/tx/4w.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/eni/burst/tx/2w.h)
+eni.h: \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   midway.h
+	@touch eni.h
+firestream.o: firestream.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   firestream.h
+fore200e.o: fore200e.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_suni.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/sba.h) \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   fore200e.h \
+   suni.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/pca.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/tx/retry.h)
+fore200e.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/sba.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/fore200e/pca.h) \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h
+	@touch fore200e.h
+horizon.o: horizon.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   horizon.h
+horizon.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/horizon/debug.h)
+	@touch horizon.h
+idt77105.o: idt77105.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_idt77105.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/param.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   idt77105.h
+idt77105.h: \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmioc.h
+	@touch idt77105.h
+idt77252.o: idt77252.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/semaphore.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/idt77252/use/suni.h) \
+   suni.h \
+   idt77252.h \
+   idt77252_tables.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/idt77252/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/idt77252/rcv/all.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/idt77252/send/idle.h)
+idt77252.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/idt77252/debug.h)
+	@touch idt77252.h
+iphase.o: iphase.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   iphase.h \
+   suni.h
+iphase.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/ia/debug.h)
+	@touch iphase.h
+lanai.o: lanai.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+nicstar.o: nicstar.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   nicstar.h \
+   nicstarmac.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/nicstar/use/suni.h) \
+   suni.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/nicstar/use/idt77105.h) \
+   idt77105.h \
+   nicstarmac.c
+nicstar.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_nicstar.h
+	@touch nicstar.h
+suni.o: suni.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_suni.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/param.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   suni.h
+suni.h: \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmioc.h
+	@touch suni.h
+uPD98402.o: uPD98402.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   uPD98402.h
+zatm.o: zatm.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/uio.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm_zatm.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   uPD98401.h \
+   uPD98402.h \
+   zeprom.h \
+   zatm.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/zatm/exact/ts.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/zatm/debug.h)
+zatm.h: \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/atm.h \
+   /root/WL330gE/src/linux/linux/include/linux/atmdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/sonet.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/zatm/exact/ts.h)
+	@touch zatm.h
+.PRECIOUS:	ambassador.h \
+	eni.h \
+	fore200e.h \
+	horizon.h \
+	idt77105.h \
+	idt77252.h \
+	iphase.h \
+	nicstar.h \
+	suni.h \
+	zatm.h \
+

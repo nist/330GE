@@ -1,0 +1,57 @@
+evdev.o: evdev.c \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h
+input.o: input.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/random.h
+joydev.o: joydev.c \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/joystick.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h
+keybdev.o: keybdev.c \
+   /root/WL330gE/src/linux/linux/include/linux/kbd_ll.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kbd_kern.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/x86.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ia64.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sparc64.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/superh.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ppc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mac/emumousebtn.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mac/adbkeycodes.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/keyboard.h)
+mousedev.o: mousedev.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/random.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/input/mousedev/screen/x.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/input/mousedev/screen/y.h)

@@ -1,0 +1,28 @@
+Install GPL 2.0.2.0
+#cd /root
+#tar jxvf WL330gE_2020_GNU_GPL.bz2
+
+Install toolchain
+#mkdir /root/broadcom/opt
+#ln -s /root/broadcom/opt /opt
+#cd /opt
+#tar jxvf toolchain.bz2 
+
+Update environment variable $PATH:
+1. add following paths to /etc/profile
+/opt/brcm/hndtools-mipsel-linux/bin
+/opt/brcm/hndtools-mipsel-uclibc/bin
+/root/broadcom/tools
+2. update $PATH
+#source /etc/profile
+
+Build WL330gE firmware image
+#cd /root/broadcom/src/router
+#make image-WL330gE
+
+When popping up the Broadcom Linux Router Configuration window, 
+select "Exit", then select "No" to use default package configuration.
+When popping up the Linux Kernel v2.4.20 Configuration window, 
+select "Exit", then select "No" to use default kernel configuration.
+
+Finally, check firmware images in /root/broadcom/src/router/mipsel

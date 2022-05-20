@@ -1,0 +1,27 @@
+divert_init.o: divert_init.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   isdn_divert.h
+divert_procfs.o: divert_procfs.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdnif.h \
+   isdn_divert.h
+isdn_divert.o: isdn_divert.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   isdn_divert.h
+isdn_divert.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdnif.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn_divertif.h
+	@touch isdn_divert.h
+.PRECIOUS:	isdn_divert.h \
+

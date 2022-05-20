@@ -1,0 +1,2 @@
+shared_ksyms.o: shared_ksyms.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h

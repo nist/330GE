@@ -1,0 +1,245 @@
+aten.o: aten.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+bpck6.o: bpck6.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport.h) \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   ppc6lnx.c \
+   paride.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/pc/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/pc.h)
+bpck.o: bpck.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+comm.o: comm.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+dstr.o: dstr.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+epat.o: epat.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/epatc8.h)
+epia.o: epia.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+fit2.o: fit2.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+fit3.o: fit3.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+friq.o: friq.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+frpw.o: frpw.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+kbic.o: kbic.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+ktti.o: ktti.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+on20.o: on20.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+on26.o: on26.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   paride.h
+paride.o: paride.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport.h) \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   paride.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/aten.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/bpck.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/comm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/dstr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/epat.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/epia.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/frpw.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/friq.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/fit2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/fit3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/kbic.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/ktti.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/on20.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/on26.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/pd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/pcd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/pf.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/pt.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/paride/pg.h)
+pcd.o: pcd.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/cdrom.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   setup.h \
+   paride.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   pseudo.h
+pd.o: pd.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/genhd.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/linux/cdrom.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   setup.h \
+   paride.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkpg.h \
+   pseudo.h
+pf.o: pf.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/genhd.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/linux/cdrom.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   setup.h \
+   paride.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkpg.h \
+   pseudo.h
+pg.o: pg.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtio.h \
+   /root/WL330gE/src/linux/linux/include/linux/pg.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   setup.h \
+   paride.h
+pseudo.h: \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h
+	@touch pseudo.h
+pt.o: pt.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtio.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   setup.h \
+   paride.h
+setup.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+	@touch setup.h
+.PRECIOUS:	pseudo.h \
+	setup.h \
+

@@ -1,0 +1,26 @@
+tbconvrt.o: tbconvrt.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actbl.h
+tbget.o: tbget.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h
+tbinstal.o: tbinstal.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h
+tbutils.o: tbutils.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h
+tbxface.o: tbxface.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h
+tbxfroot.o: tbxfroot.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h

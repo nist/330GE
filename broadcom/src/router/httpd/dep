@@ -1,0 +1,48 @@
+basic.o: basic.c httpd.h
+bcmutils.o: bcmutils.c /root/WL320g/src/include/osl.h \
+  /root/WL320g/src/include/linux_osl.h \
+  /root/WL320g/src/include/typedefs.h /root/WL320g/src/include/linuxver.h \
+  /root/WL320g/src/include/bcmutils.h
+broadcom.o: broadcom.c httpd.h /root/WL320g/src/include/typedefs.h \
+  /root/WL320g/src/include/proto/ethernet.h bcmnvram.h \
+  /root/WL320g/src/include/bcmutils.h \
+  /root/WL320g/src/router/shared/shutils.h \
+  /root/WL320g/src/router/shared/netconf.h \
+  /root/WL320g/src/router/shared/nvparse.h \
+  /root/WL320g/src/router/shared/wlutils.h \
+  /root/WL320g/src/include/wlioctl.h \
+  /root/WL320g/src/include/proto/bcmeth.h \
+  /root/WL320g/src/include/proto/bcmevent.h \
+  /root/WL320g/src/include/proto/802.11.h \
+  /root/WL320g/src/include/proto/wpa.h
+cgi.o: cgi.c
+common.o: common.c /root/WL320g/src/router/shared/shutils.h bcmnvram_f.h \
+  common.h variables.c
+defaults.o: defaults.c /root/WL320g/src/include/epivers.h bcmnvram.h
+ej.o: ej.c httpd.h bcmnvram.h
+http.o: http.c /root/WL320g/src/router/shared/shutils.h
+httpd.o: httpd.c httpd.h /root/WL320g/src/include/wlioctl.h \
+  /root/WL320g/src/include/typedefs.h \
+  /root/WL320g/src/include/proto/ethernet.h \
+  /root/WL320g/src/include/proto/bcmeth.h \
+  /root/WL320g/src/include/proto/bcmevent.h \
+  /root/WL320g/src/include/proto/802.11.h \
+  /root/WL320g/src/include/proto/wpa.h ethtool-util.h ethtool-copy.h
+nvmap.o: nvmap.c
+nvram_f.o: nvram_f.c bcmnvram.h
+nvram_x.o: nvram_x.c /root/WL320g/src/include/typedefs.h \
+  /root/WL320g/src/include/bcmutils.h bcmnvram.h \
+  /root/WL320g/src/include/osl.h /root/WL320g/src/include/linux_osl.h \
+  /root/WL320g/src/include/linuxver.h
+ralink.o: ralink.c
+shutils.o: shutils.c /root/WL320g/src/router/shared/shutils.h
+variables.o: variables.c
+web_ex.o: web_ex.c httpd.h /root/WL320g/src/router/shared/wlutils.h \
+  /root/WL320g/src/include/typedefs.h /root/WL320g/src/include/wlioctl.h \
+  /root/WL320g/src/include/proto/ethernet.h \
+  /root/WL320g/src/include/proto/bcmeth.h \
+  /root/WL320g/src/include/proto/bcmevent.h \
+  /root/WL320g/src/include/proto/802.11.h \
+  /root/WL320g/src/include/proto/wpa.h \
+  /root/WL320g/src/router/shared/shutils.h \
+  /root/WL320g/src/include/bcmutils.h bcmnvram_f.h common.h

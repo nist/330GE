@@ -1,0 +1,172 @@
+background.o: background.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/completion.h \
+   nodelist.h
+build.o: build.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   nodelist.h
+compr.o: compr.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h
+compr_rtime.o: compr_rtime.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+compr_rubin.o: compr_rubin.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   compr_rubin.h \
+   histo_mips.h
+compr_rubin.h: \
+   pushpull.h
+	@touch compr_rubin.h
+comprtest.o: comprtest.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/asm/types.h
+compr_zlib.o: compr_zlib.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/zlib.h \
+   nodelist.h
+crc32.o: crc32.c \
+   crc32.h
+crc32.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h
+	@touch crc32.h
+dir.o: dir.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2_fs_i.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2_fs_sb.h \
+   nodelist.h \
+   crc32.h
+erase.o: erase.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   nodelist.h \
+   crc32.h
+file.o: file.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   nodelist.h \
+   crc32.h
+gc.o: gc.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   nodelist.h \
+   crc32.h
+ioctl.o: ioctl.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h
+malloc.o: malloc.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   nodelist.h
+nodelist.o: nodelist.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   nodelist.h
+nodelist.h: \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2_fs_sb.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2_fs_i.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/jffs2/fs/debug.h)
+	@touch nodelist.h
+nodemgmt.o: nodemgmt.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   nodelist.h
+pushpull.o: pushpull.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   pushpull.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h
+read.o: read.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   nodelist.h \
+   crc32.h
+readinode.o: readinode.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   nodelist.h \
+   crc32.h
+scan.o: scan.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   nodelist.h \
+   crc32.h
+super.o: super.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   nodelist.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/jffs2/fs/debug.h)
+symlink.o: symlink.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   nodelist.h
+write.o: write.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jffs2.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   nodelist.h \
+   crc32.h
+.PRECIOUS:	compr_rubin.h \
+	crc32.h \
+	nodelist.h \
+

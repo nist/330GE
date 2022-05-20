@@ -1,0 +1,38 @@
+irnet.h: \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/ppp_defs.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ppp.h \
+   /root/WL330gE/src/linux/linux/include/linux/ppp_channel.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irttp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/discovery.h
+	@touch irnet.h
+irnet_irda.o: irnet_irda.c \
+   irnet_irda.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+irnet_irda.h: \
+   irnet.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+	@touch irnet_irda.h
+irnet_ppp.o: irnet_ppp.c \
+   irnet_ppp.h
+irnet_ppp.h: \
+   irnet.h
+	@touch irnet_ppp.h
+.PRECIOUS:	irnet.h \
+	irnet_irda.h \
+	irnet_ppp.h \
+

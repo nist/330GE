@@ -1,0 +1,150 @@
+dir.o: dir.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   ncplib_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/extras.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/strong.h)
+file.o: file.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   ncplib_kernel.h
+inode.o: inode.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/file.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   ncplib_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/extras.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/strong.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/packet/signing.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/nls.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/smalldos.h)
+ioctl.o: ioctl.c \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/highuid.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   ncplib_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/packet/signing.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/ioctl/locking.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/nls.h)
+mmap.o: mmap.c \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/shm.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/mman.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   ncplib_kernel.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h
+ncplib_kernel.o: ncplib_kernel.c \
+   ncplib_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/nfs/ns.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/os2/ns.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/debugdentry.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/ioctl/locking.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/nls.h)
+ncplib_kernel.h: \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/nls.h) \
+   /root/WL330gE/src/linux/linux/include/linux/nls.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/ioctl/locking.h)
+	@touch ncplib_kernel.h
+ncpsign_kernel.o: ncpsign_kernel.c \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/packet/signing.h) \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp.h \
+   ncpsign_kernel.h
+ncpsign_kernel.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h
+	@touch ncpsign_kernel.h
+sock.o: sock.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/net/scm.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/ipx.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/file.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/packet/signing.h) \
+   ncpsign_kernel.h
+symlink.o: symlink.c \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ncpfs/extras.h) \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ncp_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   ncplib_kernel.h
+.PRECIOUS:	ncplib_kernel.h \
+	ncpsign_kernel.h \
+

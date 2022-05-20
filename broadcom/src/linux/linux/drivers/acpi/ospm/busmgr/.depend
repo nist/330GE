@@ -1,0 +1,40 @@
+bm.o: bm.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bmdriver.o: bmdriver.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bmnotify.o: bmnotify.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bm_osl.o: bm_osl.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bmpm.o: bmpm.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bmpower.h
+bmpower.o: bmpower.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bmpower.h
+bmrequest.o: bmrequest.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bmsearch.o: bmsearch.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h
+bmutils.o: bmutils.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h

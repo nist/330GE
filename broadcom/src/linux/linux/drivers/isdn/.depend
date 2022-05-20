@@ -1,0 +1,137 @@
+isdn_audio.o: isdn_audio.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   isdn_audio.h \
+   isdn_common.h
+isdn_bsdcomp.o: isdn_bsdcomp.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/in.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/if.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/inet.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/ppp_defs.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn_ppp.h \
+   /root/WL330gE/src/linux/linux/include/linux/ip.h \
+   /root/WL330gE/src/linux/linux/include/linux/tcp.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/linux/ppp-comp.h \
+   isdn_ppp.h
+isdn_common.o: isdn_common.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   isdn_common.h \
+   isdn_tty.h \
+   isdn_net.h \
+   isdn_ppp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/audio.h) \
+   isdn_audio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/diversion/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/diversion.h) \
+   /root/WL330gE/src/linux/linux/include/linux/isdn_divertif.h \
+   isdn_v110.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/ppp.h) \
+   avmb1/capicmd.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/x25.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/netdevices.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h)
+isdn_concap.o: isdn_concap.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   isdn_x25iface.h \
+   isdn_net.h \
+   /root/WL330gE/src/linux/linux/include/linux/concap.h \
+   isdn_concap.h
+isdn_net.o: isdn_net.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/net/arp.h \
+   /root/WL330gE/src/linux/linux/include/net/dst.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   isdn_common.h \
+   isdn_net.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/ppp.h) \
+   isdn_ppp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/x25.h) \
+   /root/WL330gE/src/linux/linux/include/linux/concap.h \
+   isdn_concap.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/inet.h)
+isdn_ppp.o: isdn_ppp.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/ppp-comp.h \
+   isdn_common.h \
+   isdn_ppp.h \
+   isdn_net.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/mpp.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/ppp/vj.h)
+isdn_ppp.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ppp_defs.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn_ppp.h
+	@touch isdn_ppp.h
+isdn_tty.o: isdn_tty.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   isdn_common.h \
+   isdn_tty.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/audio.h) \
+   isdn_audio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h) \
+   avmb1/capicmd.h
+isdn_ttyfax.o: isdn_ttyfax.c \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   isdn_common.h \
+   isdn_tty.h \
+   isdn_ttyfax.h
+isdn_tty.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h)
+	@touch isdn_tty.h
+isdn_v110.o: isdn_v110.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   isdn_v110.h
+isdn_x25iface.o: isdn_x25iface.c \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/concap.h \
+   /root/WL330gE/src/linux/linux/include/linux/wanrouter.h \
+   isdn_x25iface.h
+isdn_x25iface.h: \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/wanrouter.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/linux/concap.h
+	@touch isdn_x25iface.h
+.PRECIOUS:	isdn_ppp.h \
+	isdn_tty.h \
+	isdn_x25iface.h \
+

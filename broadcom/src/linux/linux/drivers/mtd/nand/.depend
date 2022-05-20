@@ -1,0 +1,24 @@
+nand.o: nand.c \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nand.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nand_ids.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtd/nand/ecc.h) \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nand_ecc.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtd/nand/verify/write.h)
+nand_ecc.o: nand_ecc.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+spia.o: spia.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nand.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/partitions.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h

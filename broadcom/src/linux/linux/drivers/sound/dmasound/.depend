@@ -1,0 +1,108 @@
+dac3550a.o: dac3550a.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   dmasound.h
+dmasound_atari.o: dmasound_atari.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgalloc.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   dmasound.h
+dmasound_awacs.o: dmasound_awacs.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/asm/semaphore.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/cuda.h) \
+   /root/WL330gE/src/linux/linux/include/linux/cuda.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/pmu.h) \
+   /root/WL330gE/src/linux/linux/include/linux/pmu.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c-dev.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   awacs_defs.h \
+   dmasound.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/pbook.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kmod.h)
+dmasound_core.o: dmasound_core.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sound.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   dmasound.h
+dmasound.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/atari.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/atari/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/paula.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/paula/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/q40.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/q40/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/pmac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dmasound/pmac/module.h)
+	@touch dmasound.h
+dmasound_paula.o: dmasound_paula.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   dmasound.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/heartbeat.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/apus.h)
+dmasound_q40.o: dmasound_q40.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   dmasound.h
+tas3001c.o: tas3001c.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   dmasound.h \
+   tas3001c.h
+trans_16.o: trans_16.c \
+   /root/WL330gE/src/linux/linux/include/linux/soundcard.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   dmasound.h
+.PRECIOUS:	dmasound.h \
+

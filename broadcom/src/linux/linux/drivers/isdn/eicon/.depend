@@ -1,0 +1,237 @@
+adapter.h: \
+   sys.h \
+   idi.h \
+   divas.h \
+   pc.h
+	@touch adapter.h
+bri.o: bri.c \
+   eicon.h \
+   sys.h \
+   idi.h \
+   divas.h \
+   pc.h \
+   pr_pc.h \
+   dsp_defs.h \
+   adapter.h \
+   uxio.h
+common.o: common.c \
+   eicon.h \
+   sys.h \
+   idi.h \
+   constant.h \
+   divas.h \
+   pc.h \
+   pr_pc.h \
+   uxio.h
+divas.h: \
+   sys.h
+	@touch divas.h
+Divas_mod.o: Divas_mod.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   adapter.h \
+   uxio.h \
+   idi.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h)
+dsp_defs.h: \
+   dspdids.h
+	@touch dsp_defs.h
+eicon_dsp.h: \
+   dsp_defs.h
+	@touch eicon_dsp.h
+eicon.h: \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/mman.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdn.h \
+   /root/WL330gE/src/linux/linux/include/linux/isdnif.h \
+   eicon_isa.h \
+   idi.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h) \
+   eicon_pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mca.h) \
+   eicon_idi.h
+	@touch eicon.h
+eicon_idi.o: eicon_idi.c \
+   eicon.h \
+   eicon_idi.h \
+   eicon_dsp.h \
+   uxio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h)
+eicon_idi.h: \
+   pc.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h)
+	@touch eicon_idi.h
+eicon_io.o: eicon_io.c \
+   eicon.h \
+   uxio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/isa.h)
+eicon_isa.o: eicon_isa.c \
+   eicon.h \
+   eicon_isa.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/isa.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mca.h)
+eicon_isa.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mca.h)
+	@touch eicon_isa.h
+eicon_mod.o: eicon_mod.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mca.h) \
+   /root/WL330gE/src/linux/linux/include/linux/mca.h \
+   eicon.h \
+   ../avmb1/capicmd.h \
+   adapter.h \
+   uxio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/isa.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/tty/fax.h)
+eicon_pci.o: eicon_pci.c \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   eicon.h \
+   eicon_pci.h \
+   adapter.h \
+   uxio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isdn/drv/eicon/pci.h)
+fourbri.o: fourbri.c \
+   sys.h \
+   idi.h \
+   divas.h \
+   pc.h \
+   pr_pc.h \
+   dsp_defs.h \
+   constant.h \
+   adapter.h \
+   uxio.h
+fpga.o: fpga.c \
+   sys.h \
+   idi.h \
+   uxio.h
+idi.o: idi.c \
+   idi.h \
+   adapter.h \
+   pc.h \
+   pr_pc.h \
+   sys.h \
+   uxio.h
+idi.h: \
+   sys.h
+	@touch idi.h
+kprintf.o: kprintf.c \
+   eicon.h \
+   sys.h \
+   divas.h \
+   divalog.h \
+   uxio.h
+lincfg.o: lincfg.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   sys.h \
+   idi.h \
+   constant.h \
+   divas.h \
+   pc.h \
+   pr_pc.h \
+   adapter.h \
+   uxio.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h
+linchr.o: linchr.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   adapter.h \
+   divas.h \
+   divalog.h
+linio.o: linio.c \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   uxio.h
+linsys.o: linsys.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   sys.h \
+   divas.h \
+   adapter.h \
+   divalog.h \
+   uxio.h
+log.o: log.c \
+   sys.h \
+   idi.h \
+   divas.h \
+   adapter.h \
+   divalog.h \
+   uxio.h
+pri.o: pri.c \
+   sys.h \
+   idi.h \
+   divas.h \
+   pc.h \
+   pr_pc.h \
+   dsp_defs.h \
+   adapter.h \
+   uxio.h
+sys.h: \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+	@touch sys.h
+uxio.h: \
+   sys.h \
+   adapter.h
+	@touch uxio.h
+xlog.o: xlog.c \
+   sys.h \
+   idi.h \
+   pc.h \
+   pc_maint.h \
+   divalog.h \
+   adapter.h \
+   uxio.h
+.PRECIOUS:	adapter.h \
+	divas.h \
+	dsp_defs.h \
+	eicon_dsp.h \
+	eicon.h \
+	eicon_idi.h \
+	eicon_isa.h \
+	idi.h \
+	sys.h \
+	uxio.h \
+

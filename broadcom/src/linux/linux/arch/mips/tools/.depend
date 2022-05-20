@@ -1,0 +1,6 @@
+offset.o: offset.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/asm/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/asm/processor.h

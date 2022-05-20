@@ -1,0 +1,49 @@
+sticon.o: sticon.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   sticore.h
+sticore.o: sticore.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/video/font.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgalloc.h \
+   sticore.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h)
+sticore.h: \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgalloc.h
+	@touch sticore.h
+stifb.o: stifb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   sticore.h
+.PRECIOUS:	sticore.h \
+

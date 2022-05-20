@@ -1,0 +1,609 @@
+au1000_db1x00.o: au1000_db1x00.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000_pcmcia.h \
+   /root/WL330gE/src/linux/linux/include/asm/db1x00.h
+au1000_generic.o: au1000_generic.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000_pcmcia.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/64bit/phys/addr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1000.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1500.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/db1000.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/db1100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/db1500.h)
+au1000_pb1x00.o: au1000_pb1x00.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000_pcmcia.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1000.h) \
+   /root/WL330gE/src/linux/linux/include/asm/pb1000.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1500.h) \
+   /root/WL330gE/src/linux/linux/include/asm/pb1500.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1100.h) \
+   /root/WL330gE/src/linux/linux/include/asm/pb1100.h
+bcm4710_generic.o: bcm4710_generic.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/include/typedefs.h \
+   /root/WL330gE/src/include/sbextif.h \
+   /root/WL330gE/src/include/sbconfig.h \
+   bcm4710pcmcia.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bcm4710.h)
+bcm4710_pcmcia.o: bcm4710_pcmcia.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/include/typedefs.h \
+   /root/WL330gE/src/include/bcmdevs.h \
+   /root/WL330gE/src/include/sbconfig.h \
+   /root/WL330gE/src/include/sbextif.h \
+   bcm4710pcmcia.h
+bcm4710pcmcia.h: \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h
+	@touch bcm4710pcmcia.h
+bulkmem.o: bulkmem.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h
+cardbus.o: cardbus.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h
+cistpl.o: cistpl.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cisreg.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h)
+cs.o: cs.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cisreg.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   cs_internal.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/locked.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/io/req.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irq/req.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isa.h)
+cs_internal.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+	@touch cs_internal.h
+ds.o: ds.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ds.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h)
+hd64465_ss.o: hd64465_ss.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h
+i82092.o: i82092.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   i82092aa.h \
+   i82365.h
+i82365.o: i82365.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/linux/isapnp.h \
+   i82365.h \
+   cirrus.h \
+   vg468.h \
+   ricoh.h \
+   o2micro.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isa.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isapnp.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isapnp/module.h)
+m8xx_pcmcia.o: m8xx_pcmcia.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/rpxclassic.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/rpxlite.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mbx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fads.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pcmcia/slot/a.h)
+pci_socket.o: pci_socket.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   pci_socket.h
+rsrc_mgr.o: rsrc_mgr.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isa.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h)
+sa1100_adsbitsy.o: sa1100_adsbitsy.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100_assabet.o: sa1100_assabet.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_badge4.o: sa1100_badge4.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100_cerf.o: sa1100_cerf.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/cerf/cpld.h)
+sa1100_flexanet.o: sa1100_flexanet.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_freebird.o: sa1100_freebird.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_generic.o: sa1100_generic.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tqueue.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/notifier.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bus_ops.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   sa1100.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/freq.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/assabet.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/assabet/neponset.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/badge4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/freebird.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/h3600.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/cerf.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/graphicsclient.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/xp860.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/yopy.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/shannon.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/pangolin.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/jornada720.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/pfs168.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/flexanet.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/simpad.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/graphicsmaster.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/adsbitsy.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/stork.h)
+sa1100_graphicsclient.o: sa1100_graphicsclient.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_graphicsmaster.o: sa1100_graphicsmaster.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100.h: \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/bulkmem.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   cs_internal.h \
+   sa1100_generic.h
+	@touch sa1100.h
+sa1100_h3600.o: sa1100_h3600.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_jornada720.o: sa1100_jornada720.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100_neponset.o: sa1100_neponset.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100_pangolin.o: sa1100_pangolin.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/pangolin/pcmcia/ide.h)
+sa1100_pfs168.o: sa1100_pfs168.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+sa1100_shannon.o: sa1100_shannon.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_simpad.o: sa1100_simpad.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_stork.o: sa1100_stork.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/i2c.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_xp860.o: sa1100_xp860.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1100_yopy.o: sa1100_yopy.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h
+sa1111_generic.o: sa1111_generic.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   sa1100_generic.h \
+   sa1111_generic.h
+tcic.o: tcic.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   tcic.h
+ti113x.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cardbus.h)
+	@touch ti113x.h
+yenta.o: yenta.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ss.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   yenta.h \
+   i82365.h \
+   ti113x.h \
+   ricoh.h
+yenta.h: \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   pci_socket.h
+	@touch yenta.h
+.PRECIOUS:	bcm4710pcmcia.h \
+	cs_internal.h \
+	sa1100.h \
+	ti113x.h \
+	yenta.h \
+

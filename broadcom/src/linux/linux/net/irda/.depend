@@ -1,0 +1,281 @@
+af_irda.o: af_irda.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/sockios.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/linux/irda.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irttp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/discovery.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+crc.o: crc.c \
+   /root/WL330gE/src/linux/linux/include/net/irda/crc.h
+discovery.o: discovery.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/discovery.h
+irda_device.o: irda_device.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/if.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/wireless.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/ioctls.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/wrapper.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irtty/sir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/winbond/fir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/fir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nsc/fir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/toshiba/fir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smc/ircc/fir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/esi/dongle.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/tekram/dongle.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/actisys/dongle.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/girbil/dongle.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/litelink/dongle.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/old/belkin.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ep7211/ir.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kmod.h)
+iriap.o: iriap.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irttp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap_event.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+iriap_event.o: iriap_event.c \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap_event.h
+irias_object.o: irias_object.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h
+irlap.o: irlap.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/random.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irqueue.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/qos.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/dynamic/window.h)
+irlap_event.o: irlap_event.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap_event.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/qos.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/parameters.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/fast/rr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/dynamic/window.h)
+irlap_frame.o: irlap_frame.c \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/if.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/pkt_sched.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/wrapper.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/qos.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/dynamic/window.h)
+irlmp.o: irlmp.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/random.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/qos.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_frame.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/cache/last/lsap.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h)
+irlmp_event.o: irlmp_event.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_event.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h)
+irlmp_frame.o: irlmp_frame.c \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/discovery.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/ultra.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/cache/last/lsap.h)
+irproc.o: irproc.c \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h
+irqueue.o: irqueue.c \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irqueue.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h
+irsyms.o: irsyms.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/iriap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irttp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/wrapper.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/parameters.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irtty.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irlan.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ircomm.h)
+irsysctl.o: irsysctl.c \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irias_object.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/fast/rr.h)
+irttp.o: irttp.c \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irmod.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/parameters.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irttp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h)
+parameters.o: parameters.c \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/parameters.h
+qos.o: qos.c \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/parameters.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/qos.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda/dynamic/window.h)
+timer.o: timer.c \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/timer.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irtty.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlmp_event.h
+wrapper.o: wrapper.c \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/wrapper.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irtty.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/crc.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irlap_frame.h \
+   /root/WL330gE/src/linux/linux/include/net/irda/irda_device.h

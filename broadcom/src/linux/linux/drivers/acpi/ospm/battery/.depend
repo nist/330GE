@@ -1,0 +1,11 @@
+bt.o: bt.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bt.h
+bt_osl.o: bt_osl.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bt.h

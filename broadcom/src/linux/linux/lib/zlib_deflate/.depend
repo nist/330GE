@@ -1,0 +1,11 @@
+deflate.o: deflate.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/zutil.h \
+   defutil.h
+deflate_syms.o: deflate_syms.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/zlib.h
+deftree.o: deftree.c \
+   /root/WL330gE/src/linux/linux/include/linux/zutil.h \
+   defutil.h

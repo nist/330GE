@@ -1,0 +1,135 @@
+afs.o: afs.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/map.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/partitions.h
+bootldr.o: bootldr.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/partitions.h \
+   /root/WL330gE/src/linux/linux/include/linux/bootmem.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/debug/ll.h)
+ftl.o: ftl.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkpg.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/ftl.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h
+mtdblock.o: mtdblock.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h
+mtdblock_ro.o: mtdblock_ro.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h
+mtdchar.o: mtdchar.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h
+mtdconcat.o: mtdconcat.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/concat.h
+mtdcore.o: mtdcore.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h) \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h
+mtdpart.o: mtdpart.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/partitions.h
+nftlcore.o: nftlcore.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkpg.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kmod.h) \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nftl.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nftl/rw.h)
+nftlmount.o: nftlmount.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/asm/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/nftl.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/compatmac.h
+redboot.o: redboot.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/mtd.h \
+   /root/WL330gE/src/linux/linux/include/linux/mtd/partitions.h

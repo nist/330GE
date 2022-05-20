@@ -1,0 +1,58 @@
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307 USA
+ */
+#ifndef _X86_64_KDEBUG_H
+#define _X86_64_KDEBUG_H 1
+
+#include <linux/notifier.h>
+
+struct pt_regs;
+
+struct die_args { 
+	struct pt_regs *regs;
+	const char *str;
+	long err; 
+}; 
+
+extern struct notifier_block *die_chain;
+
+/* Grossly misnamed. */
+enum die_val { 
+	DIE_OOPS = 1,
+	DIE_INT3,
+	DIE_DEBUG,
+	DIE_PANIC,
+	DIE_NMI,
+	DIE_DIE,
+	DIE_CALL,
+	DIE_CPUINIT,	/* not really a die, but .. */
+	DIE_TRAPINIT,	/* not really a die, but .. */
+	DIE_STOP, 
+}; 
+
+static inline int notify_die(enum die_val val,char *str,struct pt_regs *regs,long err)
+{ 
+	struct die_args args = { regs: regs, str: str, err: err }; 
+	return notifier_call_chain(&die_chain, val, &args); 
+} 
+
+extern int printk_address(unsigned long address);
+extern void die(const char *,struct pt_regs *,long);
+extern void show_stack(unsigned long* esp);
+extern void show_registers(struct pt_regs *regs);
+extern void dump_pagetable(unsigned long);
+
+#endif

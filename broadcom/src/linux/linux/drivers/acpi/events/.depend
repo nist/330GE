@@ -1,0 +1,49 @@
+evevent.o: evevent.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+evmisc.o: evmisc.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h
+evregion.o: evregion.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h
+evrgnini.o: evrgnini.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h
+evsci.o: evsci.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h
+evxface.o: evxface.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h
+evxfevnt.o: evxfevnt.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h
+evxfregn.o: evxfregn.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h

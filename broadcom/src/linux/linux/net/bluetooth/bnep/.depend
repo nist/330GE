@@ -1,0 +1,72 @@
+bnep.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/bluetooth.h \
+   crc32.h
+	@touch bnep.h
+core.o: core.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/signal.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/net.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/file.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/bluetooth.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/l2cap.h \
+   bnep.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/proto/filter.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/mc/filter.h)
+crc32.o: crc32.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   crc32.h
+netdev.o: netdev.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/bluetooth.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/hci_core.h \
+   /root/WL330gE/src/linux/linux/include/net/bluetooth/l2cap.h \
+   bnep.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/mc/filter.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/proto/filter.h)
+sock.o: sock.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/socket.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/linux/file.h \
+   /root/WL330gE/src/linux/linux/include/net/sock.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   bnep.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bnep/debug.h)
+.PRECIOUS:	bnep.h \
+

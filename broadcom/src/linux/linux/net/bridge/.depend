@@ -1,0 +1,103 @@
+br.o: br.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/brlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/lane.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atm/lane/module.h) \
+   ../atm/lec.h
+br_device.o: br_device.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h
+br_fdb.o: br_fdb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h
+br_forward.o: br_forward.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/skbuff.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/netfilter_bridge.h \
+   br_private.h
+br_if.o: br_if.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_arp.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtnetlink.h \
+   /root/WL330gE/src/linux/linux/include/linux/brlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h \
+   /root/WL330gE/src/include/typedefs.h \
+   /root/WL330gE/src/switch/sys/swapi.h
+br_input.o: br_input.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/netfilter_bridge.h \
+   br_private.h
+br_ioctl.o: br_ioctl.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/inetdevice.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h
+br_notify.o: br_notify.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   br_private.h
+br_private.h: \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   br_private_timer.h
+	@touch br_private.h
+br_stp_bpdu.o: br_stp_bpdu.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_ether.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   br_private.h \
+   br_private_stp.h
+br_stp.o: br_stp.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h \
+   br_private_stp.h \
+   /root/WL330gE/src/include/typedefs.h \
+   /root/WL330gE/src/switch/sys/swapi.h
+br_stp_if.o: br_stp_if.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h \
+   br_private_stp.h
+br_stp_timer.o: br_stp_timer.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/if_bridge.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   br_private.h \
+   br_private_stp.h \
+   /root/WL330gE/src/include/typedefs.h \
+   /root/WL330gE/src/switch/sys/swapi.h
+.PRECIOUS:	br_private.h \
+

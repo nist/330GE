@@ -1,0 +1,2097 @@
+var hint_word;
+var wl_mode_current;
+
+var nav;
+var IP_RNAGE_STR_GLOBAL="";
+var LAN_NETMASK_GLOBAL="";
+
+NS = (document.layers) ? 1 : 0;
+IE = (document.all) ? 1: 0;
+
+if (IE)
+{
+	nav = false;
+} 
+else
+{
+	nav = true;
+}
+
+var seconds = 18; // the seconds of 330gE restart time
+
+/*
+function ascii_to_html(o)
+{
+	str="";
+	for(i=0;i<o.length;i++)
+	{
+		c = o.charCodeAt(i);
+		if (c==60)	// '<'
+			str+="&lt;";
+		else if (c==62)	// '>'
+			str+="&gt;";
+		else
+			str+=o.charAt(i);
+	}
+	
+	return str;
+}
+
+function change_common_radio(o, s, v, r)
+{
+	if (v=='wan_nat_x')
+	{		
+		if (r == '1')
+		{
+			document.form.wan_route_x.value="IP_Routed";
+			if (document.form.wan_proto.value!="dhcp" && document.form.wan_proto.value!="static")
+				document.form.wan_proto.value=="dhcp";
+		}
+		else
+		{
+			document.form.wan_route_x.value="IP_Bridged";
+		}
+	}
+}
+*/
+
+function show_restart(){
+	document.getElementById("restart").style.visibility="visible";
+	document.getElementById("popupHint").style.visibility="hidden";
+	if (document.form.wl_mode_ex.value=="ap")
+	{
+		if (document.form.wan_nat_x.value=="1")
+			seconds=15;
+		else
+			seconds=14;
+	}
+	showLoading(seconds);
+}
+
+function showLoading(x)
+{	
+	if(x!=-1)
+	{
+		ptext = ""+Math.round((seconds-x)*100/seconds).toString()+" \%";
+		document.getElementById("parea").innerHTML = ptext;
+		x--;
+		setTimeout("showLoading('"+x+"')", 1000);
+	}
+	else
+	{
+		document.getElementById("parea").innerHTML = "100 \%";
+		window.location.href=document.form.current_page.value;
+	}
+}
+
+var slowHide_ID_start = 0;
+var slowHide_ID_mid = 0;
+var slowShow_ID_start = 0;
+var slowShow_ID_mid = 0;
+
+function writeSSID()
+{
+	for(var i = 0; i < ap_count; i++){
+		E_str=""+"ssid"+i;
+		if(nav)
+			document.getElementById(E_str).innerHTML = AP_status[i][0];
+		else
+			document.getElementById(E_str).innerText = AP_status[i][0];
+	}
+}
+
+function writeSSID_SP()
+{
+	if (document.form.old_wl_hotspot.value=="1")
+		writeSSID();
+}
+
+function slowshowHint(){
+	if (document.form.sta_state.value!="authorized")
+		return;
+	document.getElementById("hint").style.filter = "alpha(opacity=0)";
+	document.getElementById("hint").style.opacity = 0;
+	document.getElementById("hint").style.visibility = "visible";
+	slowShow_ID_start = setTimeout("slowShow(0,'hint')", 1000);
+
+	slowHide_ID_start = setTimeout("slowHide(100,'hint')", 8000);    
+}
+
+function slowshowHint_SP()
+{
+	if (document.form.old_wl_hotspot.value=="1")
+		slowshowHint();
+}
+ 
+function slowShow(x,divName){
+	document.getElementById(divName).style.filter ="alpha(opacity="+ x +")";
+	document.getElementById(divName).style.opacity = x*0.01;       
+	x += 5;
+	slowShow_ID_mid = setTimeout("slowShow("+ x +",'"+divName+"')",100);
+	if(x >= 100){
+		clearTimeout(slowShow_ID_start);
+		slowShow_ID_start = 0;
+		clearTimeout(slowShow_ID_mid);
+		slowShow_ID_mid = 0; 
+	}
+}
+ 
+function slowHide(x,divName){
+	document.getElementById(divName).style.filter = "alpha(opacity="+ x +")";
+	document.getElementById(divName).style.opacity = x*0.01; 
+	x -= 5;
+	slowHide_ID_mid = setTimeout("slowHide("+ x +",'"+divName+"')",100);
+
+	if(x < 0){
+		clearTimeout(slowHide_ID_start);
+		slowHide_ID_start = 0;
+		clearTimeout(slowHide_ID_mid);
+		slowHide_ID_mid = 0;
+		document.getElementById(divName).style.visibility = "hidden";
+	}
+}
+
+function fastHide(){
+	document.getElementById("hint").style.visibility = "hidden";
+	document.getElementById("hint").style.filter = "alpha(opacity=0)";
+	document.getElementById("hint").style.opacity = 0; 
+
+	clearTimeout(slowHide_ID_start);
+	slowHide_ID_start = 0;
+	clearTimeout(slowHide_ID_mid);
+	slowHide_ID_mid = 0;
+}
+
+function fastHide_SP()
+{
+	if (document.form.old_wl_hotspot.value=="1")	
+		fastHide();
+}
+
+function validate_char(ch)
+{
+	if (ch>=32&&ch<=126)
+		return true;
+	else
+		return false;
+}
+
+function validate_ssid(o)
+{		
+	for(i=0;i<o.value.length;i++)
+	{
+		c = o.value.charCodeAt(i);
+		if (!validate_char(c))
+		{
+			alert(quick_translate_lang('JS_validstr', document.form.preferred_lang.value) + ' \"' + o.value.charAt(i) + '\" !');
+  			o.value="";
+  			o.focus();
+			return false;
+		}
+	}
+
+  	if (o.value == "")
+  	{
+		o.value = "default";
+  		o.focus();
+		return false;
+	}
+/*
+	else if (o.value == document.form.wl_guest_ssid_org.value)
+	{
+		o.value = document.form.wl_ssid_org.value;
+		o.focus();
+		return false;
+	}
+*/
+	return true;
+}
+
+function showPop(){
+	fastHide();
+	scrollTo(0, 0);
+	count=ap_count;
+	document.form.no_ask_password.value="0";
+	document.form.wl_wpa_psk.value="";
+	if (count>0)
+	{
+		if(count>1)
+		for(var i = 0; i < count; i++)
+		{
+			if(document.form.AP_select[i].checked==true)
+			{
+				if (AP_status[i][2]=="0" || (AP_status[i][4]=="authenticated" && (AP_status[i][0]==document.form.wf1_ssid.value || AP_status[i][0]==document.form.wf2_ssid.value || AP_status[i][0]==document.form.wf3_ssid.value || AP_status[i][0]==document.form.wf4_ssid.value)))
+				{
+					if (AP_status[i][2]!="0")	// use settings in profile list
+						document.form.no_ask_password.value="1";
+
+					select_idx=i;
+					document.getElementById("popupWindow").style.visibility="hidden";
+					show_hint();
+				}
+				else if (AP_status[i][2]=="6" || AP_status[i][2]=="7")
+				{
+					alert(quick_translate_lang('JS_unsupported', document.form.preferred_lang.value));
+					select_idx=-1;
+					document.getElementById("popupWindow").style.visibility="hidden";
+				}
+				else
+				{
+					select_idx=i;
+					document.getElementById("popupWindow").style.visibility="visible";
+					document.form.wl_wpa_psk.focus();
+				}
+
+				if (document.form.no_ask_password.value=="0")
+				{
+					if (AP_status[i][0]==document.form.wf1_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf1_passwd.value;
+					else if (AP_status[i][0]==document.form.wf2_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf2_passwd.value;
+					else if (AP_status[i][0]==document.form.wf3_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf3_passwd.value;
+					else if (AP_status[i][0]==document.form.wf4_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf4_passwd.value;
+				}
+
+				return;
+			}
+		}
+		else
+		{
+			if(document.form.AP_select.checked==true)
+			{
+				if (AP_status[0][2]=="0" || (AP_status[0][4]=="authenticated" &&(AP_status[0][0]==document.form.wf1_ssid.value || AP_status[0][0]==document.form.wf2_ssid.value || AP_status[0][0]==document.form.wf3_ssid.value || AP_status[0][0]==document.form.wf4_ssid.value)))
+				{
+					if (AP_status[0][2]!="0")	// use settings in profile list
+						document.form.no_ask_password.value="1";
+
+					select_idx=0;
+					document.getElementById("popupWindow").style.visibility="hidden";
+					show_hint();
+				}
+				else if (AP_status[0][2]=="6" || AP_status[0][2]=="7")
+				{
+					alert(quick_translate_lang('JS_unsupported', document.form.preferred_lang.value));
+					select_idx=-1;
+					document.getElementById("popupWindow").style.visibility="hidden";
+				}
+				else
+				{
+					select_idx=0;
+					document.getElementById("popupWindow").style.visibility="visible";
+				}
+
+				if (document.form.no_ask_password.value=="0")
+				{
+					if (AP_status[0][0]==document.form.wf1_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf1_passwd.value;
+					else if (AP_status[0][0]==document.form.wf2_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf2_passwd.value;
+					else if (AP_status[0][0]==document.form.wf3_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf3_passwd.value;
+					else if (AP_status[0][0]==document.form.wf4_ssid.value)
+						document.form.wl_wpa_psk.value=document.form.wf4_passwd.value;
+				}
+
+				return;
+			}
+		}
+	}
+}
+
+function showPop_re(){
+	if(document.form.op_mode.value!="gw-repeater")	
+		return checkPW();
+
+	fastHide();
+	scrollTo(0, 0);
+	count=ap_count;
+	document.form.no_ask_password.value="0";
+	document.form.wl_wpa_psk_ure.value="";
+	if (count>0)
+	{
+		if(count>1)
+		for(var i = 0; i < count; i++)
+		{
+			if(document.form.AP_select[i].checked==true)
+			{
+				if (AP_status[i][2]=="0" || AP_status[i][4]=="authenticated")
+				{
+					if (AP_status[i][2]!="0")	// use settings in profile list
+						document.form.no_ask_password.value="1";
+
+					select_idx=i;
+					document.getElementById("popupWindow").style.visibility="hidden";
+					show_hint();
+				}
+				else if (AP_status[i][2]=="6" || AP_status[i][2]=="7")
+				{
+					alert(quick_translate_lang('JS_unsupported', document.form.preferred_lang.value));
+					select_idx=-1;
+					document.getElementById("popupWindow").style.visibility="hidden";
+				}
+				else
+				{
+					select_idx=i;
+					document.getElementById("popupWindow").style.visibility="visible";
+					document.form.wl_wpa_psk_ure.focus();
+				}
+
+				if (document.form.no_ask_password.value=="0")
+				{
+					if (AP_status[i][0]==document.form.wf1_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf1_passwd.value;
+					else if (AP_status[i][0]==document.form.wf2_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf2_passwd.value;
+					else if (AP_status[i][0]==document.form.wf3_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf3_passwd.value;
+					else if (AP_status[i][0]==document.form.wf4_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf4_passwd.value;
+				}
+
+				return;
+			}
+		}
+		else
+		{
+			if(document.form.AP_select.checked==true)
+			{
+				if (AP_status[0][2]=="0" || AP_status[0][4]=="authenticated")
+				{
+					if (AP_status[0][2]!="0")	// use settings in profile list
+						document.form.no_ask_password.value="1";
+
+					select_idx=0;
+					document.getElementById("popupWindow").style.visibility="hidden";
+					show_hint();
+				}
+				else if (AP_status[0][2]=="6" || AP_status[0][2]=="7")
+				{
+					alert(quick_translate_lang('JS_unsupported', document.form.preferred_lang.value));
+					select_idx=-1;
+					document.getElementById("popupWindow").style.visibility="hidden";
+				}
+				else
+				{
+					select_idx=0;
+					document.getElementById("popupWindow").style.visibility="visible";
+				}
+
+				if (document.form.no_ask_password.value=="0")
+				{
+					if (AP_status[0][0]==document.form.wf1_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf1_passwd.value;
+					else if (AP_status[0][0]==document.form.wf2_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf2_passwd.value;
+					else if (AP_status[0][0]==document.form.wf3_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf3_passwd.value;
+					else if (AP_status[0][0]==document.form.wf4_ssid.value)
+						document.form.wl_wpa_psk_ure.value=document.form.wf4_passwd.value;
+				}
+
+				return;
+			}
+		}
+	}
+}
+
+function hidePop(){
+	document.getElementById("popupWindow").style.visibility="hidden";
+}
+
+function hidePop_SP(){
+	if (validate_wlphrase_client('WLANConfig11b', document.form.wl_wpa_psk))
+	{
+		hidePop();
+		show_hint();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function hidePop_SP_re(){
+	if (validate_wlphrase_client('WLANConfig11b', document.form.wl_wpa_psk_ure))
+	{
+		hidePop();
+		show_hint();
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+function is_current_Mode(X, EX){
+	mode_current="";
+	if( X == 1 && EX == "ap")
+	{
+		mode_current = "Gateway";
+	}
+	else if( X == 1 && EX == "sta")
+	{
+		mode_current = "Gateway-Adapter";
+	}
+	else if( X == 1 && EX == "re")
+	{
+		mode_current = "Gateway-Repeater";
+	}
+	else if(X == 0 && EX == "ap")
+	{
+		mode_current = "AP";
+	}
+	else if(X == 0 && EX == "sta")
+	{
+		mode_current = "Adapter";
+	}
+	else if(X == 0 && EX == "re")
+	{
+		mode_current = "Repeater";
+	}
+	return mode_current;
+}
+
+function STA_URE_onload()
+{
+	writeSSID();
+	isAuthenticated();
+	slowshowHint();
+}
+
+function STA_URE_onload_SP()
+{
+	writeSSID_SP();
+	isAuthenticated_SP();
+	slowshowHint_SP();
+}
+
+function refreshYA(){
+	fastHide();
+	location.reload();
+}
+
+function ShowPass(y){
+	if (y==0 || y==4)
+		document.getElementById("wep_password").style.display = 'none';
+	else
+		document.getElementById("wep_password").style.display = 'inline';
+}
+
+function checkPW(){
+	if (!validate_ssid(document.form.ssid))
+		return false;
+
+	if(	document.form.SecurityLevel.selectedIndex == 0 ||
+		document.form.SecurityLevel.selectedIndex == 4
+	)
+	{
+		show_hint();
+//		confirm_hint(document.form.op_mode.value);
+	}
+	else if(document.form.SecurityLevel.selectedIndex == 1 ||
+		document.form.SecurityLevel.selectedIndex == 2 ||
+		document.form.SecurityLevel.selectedIndex == 3
+	)
+	{
+		if (validate_wlphrase_q('WLANConfig11b', document.form.wl_wpa_psk))
+		{
+			show_hint();
+//			confirm_hint(document.form.op_mode.value);
+		}
+	}
+}//end of function checkPW()
+
+function confirm_hint(op_mode){
+	wl_mode_current=is_current_Mode(document.form.wan_nat_X.value,document.form.wl_mode_EX.value);
+	IP_RNAGE_STR_GLOBAL=lip_range(document.form.LANIP.value, document.form.LANNM.value, document.form.preferred_lang.value);
+	LAN_NETMASK_GLOBAL=document.form.LANNM.value;
+
+	//  AP -> Gateway
+	if(op_mode == "router" && wl_mode_current == "AP")
+	{
+		hint_word = quick_translate_lang('JS_hint_ap_gw',document.form.preferred_lang.value);
+	}
+	//  Adapter  -> Gateway
+	else if(op_mode == "router" && wl_mode_current == "Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_sta_gw',document.form.preferred_lang.value);
+	}
+	//  Repeater -> Gateway
+	else if(op_mode == "router" && wl_mode_current == "Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_re_gw',document.form.preferred_lang.value);
+	}
+	//  Gateway-Adapter -> Gateway
+	else if(op_mode == "router" && wl_mode_current == "Gateway-Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwsta_gw',document.form.preferred_lang.value);
+	}
+	//  Gateway-Repeater -> Gateway
+	else if(op_mode == "router" && wl_mode_current == "Gateway-Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwre_gw',document.form.preferred_lang.value);
+	}
+
+
+	//  AP -> Gateway-Repeater
+	else if(op_mode == "gw-repeater" && wl_mode_current == "AP")
+	{
+		hint_word = quick_translate_lang('JS_hint_ap_gwre',document.form.preferred_lang.value);
+	}
+	//  Adapter  -> Gateway-Repeater
+	else if(op_mode == "gw-repeater" && wl_mode_current == "Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_sta_gwre',document.form.preferred_lang.value);
+	}
+	//  Repeater -> Gateway-Repeater
+	else if(op_mode == "gw-repeater" && wl_mode_current == "Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_re_gwre',document.form.preferred_lang.value);
+	}
+	//  Gateway -> Gateway-Repeater
+	else if(op_mode == "gw-repeater" && wl_mode_current == "Gateway")
+	{
+		hint_word = quick_translate_lang('JS_hint_gw_gwre',document.form.preferred_lang.value);
+	}
+	//  Gateway-Adapter -> Gateway-Repeater
+	else if(op_mode == "gw-repeater" && wl_mode_current == "Gateway-Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwsta_gwre',document.form.preferred_lang.value);
+	}
+
+
+	//  Gateway -> AP
+	else if(op_mode == "AP" && wl_mode_current == "Gateway")
+	{
+		hint_word = quick_translate_lang('JS_hint_gw_ap',document.form.preferred_lang.value);
+	}
+	//  Adapter -> AP	
+	else if(op_mode == "AP" && wl_mode_current == "Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_sta_ap',document.form.preferred_lang.value);
+	}
+	//  Repeater -> AP	
+	else if(op_mode == "AP" && wl_mode_current == "Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_re_ap',document.form.preferred_lang.value);
+	}
+	//  Gateway-Adapter -> AP	
+	else if(op_mode == "AP" && wl_mode_current == "Gateway-Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwsta_ap',document.form.preferred_lang.value);
+	}
+	//  Gateway-Repeater -> AP	
+	else if(op_mode == "AP" && wl_mode_current == "Gateway-Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwre_ap',document.form.preferred_lang.value);
+	}
+
+
+	//  Gateway -> Adapter	
+	else if(op_mode == "adapter" && wl_mode_current == "Gateway")
+	{
+		hint_word = quick_translate_lang('JS_hint_gw_sta',document.form.preferred_lang.value);
+	}			
+	//  AP -> Adapter		
+	else if(op_mode == "adapter" && wl_mode_current == "AP")
+	{
+		hint_word = quick_translate_lang('JS_hint_ap_sta',document.form.preferred_lang.value);
+	}				
+	//  Repeater -> Adapter		
+	else if(op_mode == "adapter" && wl_mode_current == "Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_re_sta',document.form.preferred_lang.value);
+	}
+	//  Gateway-Adapter -> Adapter		
+	else if(op_mode == "adapter" && wl_mode_current == "Gateway-Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwsta_sta',document.form.preferred_lang.value);
+	}
+	//  Gateway-Repeater -> Adapter		
+	else if(op_mode == "adapter" && wl_mode_current == "Gateway-Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwre_sta',document.form.preferred_lang.value);
+	}
+
+
+	//  Gateway -> Repeater	
+	else if(op_mode == "repeater" && wl_mode_current == "Gateway")
+	{
+		hint_word = quick_translate_lang('JS_hint_gw_re',document.form.preferred_lang.value);
+	}			
+	//  AP -> Repeater		
+	else if(op_mode == "repeater" && wl_mode_current == "AP")
+	{
+		hint_word = quick_translate_lang('JS_hint_ap_re',document.form.preferred_lang.value);
+	}				
+	//  Adapter -> Repeater		
+	else if(op_mode == "repeater" && wl_mode_current == "Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_sta_re',document.form.preferred_lang.value);
+	}
+	//  Gateway-Adapter -> Repeater		
+	else if(op_mode == "repeater" && wl_mode_current == "Gateway-Adapter")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwsta_re',document.form.preferred_lang.value);
+	}
+	//  Gateway-Repeater -> Repeater		
+	else if(op_mode == "repeater" && wl_mode_current == "Gateway-Repeater")
+	{
+		hint_word = quick_translate_lang('JS_hint_gwre_re',document.form.preferred_lang.value);
+	}
+
+
+	else 
+	{
+		hint_word = quick_translate_lang('JS_hint_others',document.form.preferred_lang.value);
+	}
+	return hint_word;
+}	
+
+function isAuthenticated()
+{
+	count=ap_count;
+	if (count>0)
+	{
+		if (count>1)
+		{
+			for(var i = 0; i < count; i++)
+			{
+				if(AP_status[i][4] == "authenticated")
+				{
+					document.form.AP_select[i].checked = true;
+					return;
+				}
+			}
+			for(var i = 0; i < count; i++)
+			{
+				if(AP_status[i][4] != "none")
+				{
+					document.form.AP_select[i].checked = true;
+					return;
+				}
+			}
+			document.form.AP_select[0].checked = true;
+		}
+		else if (count==1)
+			document.form.AP_select.checked = true;
+	}
+}//end of function isAuthenticated=================
+
+function isAuthenticated_SP()
+{
+	if (document.form.old_wl_hotspot.value=="1")
+		isAuthenticated();
+}
+
+function show_hint()
+{
+	document.getElementById("popupHint").style.visibility="visible";
+	document.getElementById("language_select").style.visibility="hidden";
+	if (document.form.current_page.value=="Wizard_Gateway.asp" || document.form.current_page.value=="Wizard_AP.asp")
+		document.getElementById("SecurityLevel").style.visibility="hidden";  
+}//end of function show_hint
+
+function hide_hint()
+{
+	document.getElementById("popupHint").style.visibility="hidden";
+	document.getElementById("language_select").style.visibility="visible"; 
+	if (document.form.current_page.value=="Wizard_Gateway.asp" || document.form.current_page.value=="Wizard_AP.asp")
+		document.getElementById("SecurityLevel").style.visibility="visible";
+}
+
+function add_option_x(o, i, s, f)
+{
+	tail = o.options.length;
+
+	o.options[tail] = new Option(s);
+	o.options[tail].value = i;
+
+	if (f==1)
+	{
+		o.options[tail].selected = f;
+	}
+}
+
+function change_security(o, s, l)
+{
+	if (o.value == "0")
+	{
+		pflag = 0;
+		wflag = 0;
+
+		authTypeValue = "open"; // Open or Shared
+		wepTypeValue = "0";	// None
+		cryptoValue = "tkip";
+
+		document.getElementById("wep_password").style.display ="none";
+	}
+	else if (o.value == "1")
+	{
+		pflag = 1;
+		wflag = 1;
+
+		authTypeValue = "open";	// Shared
+		wepTypeValue = "1";     // WEP-128 bits
+		cryptoValue = "tkip";
+	}
+	else if (o.value == "2")
+	{
+		pflag = 1;
+	    	wflag = 1;
+
+		authTypeValue = "open";	// Shared
+		wepTypeValue = "2";     // WEP-128 bits
+		cryptoValue = "tkip";
+	}
+	else if (o.value == "3")
+	{
+		pflag = 1;
+		wflag = 0;
+
+		authTypeValue = "psk";	// WPA-PSK only
+		wepTypeValue= "0";	// TKIP
+		cryptoValue = "tkip";
+	}
+	else if (o.value == "4")
+	{
+		pflag = 0;
+		wflag = 0;
+		authTypeValue = "";
+    		wepTypeValue = "";
+		cryptoValue = "";
+	}
+	if (o.options.length == 5 && o.value != "4")
+	{
+		if (confirm(quick_translate_lang('JS_wpa',document.form.preferred_lang.value)))
+		{
+			o.options[4].value = null;
+			o.options[4] = null;
+
+			document.form.wl_auth_mode.value = authTypeValue;
+			document.form.wl_crypto.value = cryptoValue;
+			document.form.wl_wep_x.value.value = wepTypeValue;
+		}
+		else
+		{
+			pflag = 0;
+			wflag = 0;
+			o.value = "4";
+			authTypeValue="";
+			cryptoValue="";
+			wepTypeValue="";
+		}
+	}
+
+	ShowPass(o.selectedIndex);
+
+	if (authTypeValue!="")
+	{
+		document.form.wl_auth_mode.value = authTypeValue;
+		document.form.wl_crypto.value = cryptoValue;
+		document.form.wl_wep_x.value = wepTypeValue;
+	}
+
+	if (l==1)
+	{
+		if (o.value=="1" || o.value=="2")
+		{
+			if (document.form.wl_key.value=="1")
+				document.form.wl_wpa_psk.value=document.form.wl_key1.value;
+			else if (document.form.wl_key.value=="2")
+				document.form.wl_wpa_psk.value=document.form.wl_key2.value;
+			else if (document.form.wl_key.value=="3")
+				document.form.wl_wpa_psk.value=document.form.wl_key3.value;
+			else if (document.form.wl_key.value=="4")
+				document.form.wl_wpa_psk.value=document.form.wl_key4.value;
+		}
+	}
+	else
+	{
+		if (o.value=="1")
+		{
+			is_wlphrase("WLANConfig11b", 'wl_phrase_x', document.form.wl_wpa_psk);
+		}
+		else if (o.value=="2")
+		{
+			is_wlphrase("WLANConfig11b", 'wl_phrase_x', document.form.wl_wpa_psk);
+		}
+		if (o.value=="3")
+			document.form.wl_wpa_psk.value=document.form.wl_wpa_psk_org.value;
+	}
+
+	if (l==0 && o.value != "0")
+	{
+		document.form.wl_wpa_psk.focus();
+	}
+}
+
+function load_URE_Security()
+{
+	document.form.wl_auth_mode.value=document.form.wl_guest_auth_mode_1_org.value;
+	document.form.wl_wpa_mode.value=document.form.wl_guest_wpa_mode_org.value;
+	document.form.wl_crypto.value=document.form.wl_guest_crypto_1_org.value;
+	document.form.wl_wpa_psk.value=document.form.wl_guest_wpa_psk_1_org.value;
+	document.form.wl_wep_x.value=document.form.wl_guest_wep_x_1_org.value;
+	document.form.wl_key1.value=document.form.wl_guest_key1_1_org.value;
+	document.form.wl_key2.value=document.form.wl_guest_key2_1_org.value;
+	document.form.wl_key3.value=document.form.wl_guest_key3_1_org.value;
+	document.form.wl_key4.value=document.form.wl_guest_key4_1_org.value;
+	document.form.wl_key.value=document.form.wl_guest_key_1_org.value;
+}
+
+function loadSecurity()
+{
+	if(document.form.op_mode.value=="gw-repeater")
+		load_URE_Security();
+
+	authType=document.form.wl_auth_mode.value;
+	cryptoType=document.form.wl_crypto.value;
+	wepType=document.form.wl_wep_x.value;
+
+	if (authType == "open" && wepType == "0")
+	{
+		document.form.SecurityLevel.value = "0";
+		document.getElementById("wep_password").style.display ="none";
+	}
+	else if (authType == "open" && wepType == "1")
+	{
+		document.form.SecurityLevel.value = "1";
+	}
+	else if (authType == "open" && wepType == "2")
+	{
+		document.form.SecurityLevel.value = "2";
+	}
+	else if (authType == "psk" && cryptoType == "tkip")
+	{
+		document.form.SecurityLevel.value = "3";
+	}
+	else 
+	{
+		add_option_x(document.form.SecurityLevel, 4, "Extra", 1);
+		document.form.SecurityLevel.value = "4";
+		document.getElementById("wep_password").style.display ="none";
+	}
+
+	change_security(document.form.SecurityLevel, "WLANConfig11b", 1);
+}
+
+function validate_wlphrase(s, v, o)
+{
+	if (v == "wl_wpa_psk")
+	{
+		if(document.form.wl_auth_mode.value == "psk")
+		{
+			if (o.value.length < 8)
+			{
+				alert(quick_translate_lang('JS_passzero',document.form.preferred_lang.value));
+				if (v == "wl_wpa_psk")
+					document.form.wl_wpa_psk.value = "12345678";
+				else if (v == "wl_guest_wpa_psk_1")
+					document.form.wl_guest_wpa_psk_1.value = "12345678";
+				else if (v == "mssid_wpa_psk_x_0")
+					document.form.mssid_wpa_psk_x_0.value = "12345678";
+				o.focus();
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+function validate_wlphrase_client(s, o)
+{
+	if (AP_status[select_idx][2]=="1")
+		return(validate_wlkey_client(o, 'WLANConfig11b'))
+	else
+		return(validate_psk_client(s, 'wl_wpa_psk', o));
+}
+
+function validate_wlkey_client(o, s)
+{
+	if ((o.value.length == 10 || o.value.length == 26) && isvalid_wepkey(o.value))
+	{
+		return true;
+	}
+	else
+	{
+		alert(quick_translate_lang('JS_wepkey',document.form.preferred_lang.value));
+		o.value = "0000000000";
+		o.focus();
+		return false;
+	}
+}
+
+function validate_psk_client(s, v, o)
+{
+	if (v == "wl_wpa_psk")
+	{
+		if (o.value.length < 8)
+		{
+			alert(quick_translate_lang('JS_passzero',document.form.preferred_lang.value));
+			if (v == "wl_wpa_psk")
+			{
+				if(document.form.op_mode.value=="gw-repeater")
+					document.form.wl_wpa_psk_ure.value = "12345678";
+				else
+					document.form.wl_wpa_psk.value = "12345678";
+			}
+			else if (v == "wl_guest_wpa_psk_1")
+				document.form.wl_guest_wpa_psk_1.value = "12345678";
+			else if (v == "mssid_wpa_psk_x_0")
+				document.form.mssid_wpa_psk_x_0.value = "12345678";
+			o.focus();
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function validate_wlphrase_q(s, o)
+{
+	if (document.form.SecurityLevel.value=="1" || document.form.SecurityLevel.value=="2")
+		return(validate_wlkey(o, 'WLANConfig11b'))
+	else if (document.form.SecurityLevel.value=="3")
+		return(validate_wlphrase(s, 'wl_wpa_psk', o));
+	else
+		return false;
+}
+
+function isvalid_wepkey(v)
+{
+	for (i = 0; i < v.length; ++i) {
+		var c = v.charAt(i);
+		var c1 = (c >= '0') && (c <= '9');  /* 0 ~ 9 */
+		var c2 = (c >= 'A') && (c <= 'F');  /* A ~ F */
+		var c3 = (c >= 'a') && (c <= 'f');  /* a ~ f */
+		if (!c1 && !c2 && !c3) {
+			return false;
+		}
+	}
+	return true;
+}
+
+function validate_wlkey(o, s)
+{
+	wep = document.form.wl_wep_x.value;
+
+	if (wep == "1")
+	{
+		if(isvalid_wepkey(o.value) && o.value.length == 10)
+			return true;
+	}
+	else if (wep == "2")
+	{
+		if(isvalid_wepkey(o.value) && o.value.length == 26)
+			return true;
+	}
+
+	alert(quick_translate_lang('JS_wepkey',document.form.preferred_lang.value));
+
+	if (wep == "1")
+		o.value = "0000000000";
+	else if (wep == "2")
+		o.value = "00000000000000000000000000";
+	o.focus();
+
+	return false;
+}
+
+function valid_WPAPSK(o)
+{
+	if (o.value.length>=64)
+	{
+		o.value = o.value.substring(0, 63);
+		alert(quick_translate_lang('JS_wpapass',document.form.preferred_lang.value));
+		o.focus();
+		return false;
+	}
+
+	return true;
+}
+
+function is_wlphrase(s, v, o)
+{
+//	window.top.pageChanged = 1;
+
+	if (v=='wl_wpa_psk')
+		return(valid_WPAPSK(o));
+
+	pseed = new Array;
+	wep_key = new Array(5);
+    	wepType = document.form.wl_wep_x.value;
+    	wepKey1 = document.form.wl_key1;
+    	wepKey2 = document.form.wl_key2;
+    	wepKey3 = document.form.wl_key3;
+    	wepKey4 = document.form.wl_key4;
+
+	phrase = o.value;
+
+	if(wepType == "1")
+	{
+		for (i=0; i<phrase.length; i++)
+		{
+			pseed[i%4] ^= phrase.charCodeAt(i);
+		}
+
+        	randNumber = pseed[0] | (pseed[1]<<8) | (pseed[2]<<16) | (pseed[3]<<24);
+
+        	for (j=0; j<5; j++)
+		{
+			randNumber = ((randNumber * 0x343fd) % 0x1000000);
+			randNumber = ((randNumber + 0x269ec3) % 0x1000000);
+			wep_key[j] = ((randNumber>>16) & 0xff);
+		}
+		wepKey1.value = binl2hex_c(wep_key);
+
+		o.value = wepKey1.value;
+	}
+	else if (wepType == "2")
+	{
+		password = "";
+
+		if (phrase.length>0)
+		{
+			for (i=0; i<64; i++)
+			{
+				ch = phrase.charAt(i%phrase.length);
+				password = password + ch;
+			}
+		}
+
+		password = calcMD5(password);
+
+		if (wepType == "2")
+		{
+			wepKey1.value = password.substr(0, 26);
+		}
+		else
+		{
+			wepKey1.value = password.substr(0, 32);
+		}
+
+		o.value = wepKey1.value;
+	}
+
+	return true;
+}
+
+function change_wlkey(o, s)
+{
+	wep = document.form.wl_wep_x.value;
+
+	if (wep == "1")
+	{
+		if(o.value.length > 10)
+			o.value = o.value.substring(0, 10);
+	}
+	else if (wep == "2")
+	{
+		if(o.value.length > 26)
+			o.value = o.value.substring(0, 26);
+	}
+	else
+		return false;
+}
+
+function is_wlphrase_client(s, o)
+{
+	if (AP_status[select_idx][2]=="1")
+		return change_wlkey(o, s);
+	else
+		return(is_wlphrase(s, 'wl_wpa_psk', o));
+}
+
+function is_wlphrase_q(s, o)
+{
+	if (document.form.SecurityLevel.value=="1" || document.form.SecurityLevel.value=="2")
+    		return change_wlkey(o, s);
+	else if (document.form.SecurityLevel.value=="3")
+		return(is_wlphrase(s, 'wl_wpa_psk', o));
+	else
+		return false;
+}
+
+function is_wlkey(event, o, s) 
+{
+	if (document.form.SecurityLevel.value=="1" || document.form.SecurityLevel.value=="2")
+ 	{
+		var keyPressed = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+		if (nav)
+		{
+			if (	(keyPressed==8)||	// backspace
+				(keyPressed==35)||	// end
+				(keyPressed==36)||	// home
+				(keyPressed==37)||	// <-
+				(keyPressed==39)||	// ->
+				(keyPressed==46)	// delete
+			)
+				keyPressed=0;
+		}
+
+ 		if (keyPressed == 0) return true;
+
+// 		window.top.pageChanged = 1;
+
+ 		wep = document.form.wl_wep_x.value;
+
+ 		if ((keyPressed>47 && keyPressed<58)||(keyPressed>64 && keyPressed<71)||(keyPressed>96 && keyPressed<103))
+ 		{
+     			if (wep == "1")
+     			{
+     	  			if(o.value != "" && o.value.length > 10) return false;
+     			}
+     			else if (wep == "2")
+     			{
+     	  			if(o.value != "" && o.value.length > 26) return false;
+     			}
+     			else return false;
+ 		}
+ 		else
+ 			return false;
+		return true;
+	}
+	else
+		return true;
+}
+
+function quick_translate_lang(o,v)
+{
+	translated_string="";
+	PID_STR=document.form.PID.value;
+
+        if(v=='TW')
+        {
+		if(o=='JS_wpa')
+                	translated_string="您已選擇另一種無線驗證方式及加密功能，您確定要作覆蓋嗎？";
+                else if(o=='JS_GW_AP')
+                	translated_string='在"家用閘道器-AP"模式下, 您只能透過無線網路連接區域網路！';
+		else if(o=='JS_passzero')
+			translated_string="WPA預先共用金鑰不得少於8個字元!!!如果您將本欄位保留空白，系統將會指定12345678作為您的通關密語。";
+		else if(o=='JS_wepkey')
+			translated_string="請輸入完整的WEP金鑰。\n您可以輸入 10 或 26 個十六進位字元 (0~9, a~f, A~F)。";
+		else if(o=='JS_wpapass')
+			translated_string="WPA預先共用金鑰不得超出63個字元!!!";
+		else if(o=='JS_LANG_EN')
+			translated_string="英文";
+		else if(o=='JS_LANG_TW')
+			translated_string="繁體中文";
+		else if(o=='JS_LANG_CN')
+			translated_string="簡體中文";
+		else if(o=='JS_LANG_KR')
+			translated_string="韓文";
+
+		else if(o=='JS_hint_ap_gw')
+			translated_string="您正準備由AP模式切換到Gateway模式。<br><br>按下確定後，請將您電腦的IP位址更改為「自動取得IP位址」，始可以無線方式連接設定頁面。<br><br>您確定要切換成Gateway模式？";
+		else if(o=='JS_hint_sta_gw')
+			translated_string="您正準備由Adapter模式切換到Gateway模式。<br><br>按下確定後，請移除您電腦與" + PID_STR + "之間的乙太網路纜線。將" + PID_STR + "（藉由乙太網路纜線）接上您的ADSL/Cable Modem。並將您電腦的IP位址更改為「自動取得IP位址」，以（藉由無線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway模式？";
+		else if(o=='JS_hint_re_gw')
+			translated_string="您正準備由Repeater模式切換到Gateway模式。<br><br>按下確定後，請將" + PID_STR + "（藉由乙太網路纜線）重新接上您的區域網路。並將您電腦的IP位址更改為「自動取得IP位址」，以（藉由無線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway模式？";
+		else if(o=='JS_hint_gwsta_gw')
+			translated_string="您確定要切換成Gateway模式？";
+		else if(o=='JS_hint_gwre_gw')
+			translated_string="您正準備由Gateway-Repeater模式切換到Gateway模式。<br><br>按下確定後，請將" + PID_STR + "（藉由乙太網路纜線）重新接上您的區域網路。並將您電腦的IP位址更改為「自動取得IP位址」，以（藉由無線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway模式？";
+
+		else if(o=='JS_hint_ap_gwre')
+			translated_string="您正準備由AP模式切換到Gateway-Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」，以（藉由無線或乙太網路纜線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway-Repeater模式？";
+		else if(o=='JS_hint_sta_gwre')
+			translated_string="您正準備由Adapter模式切換到Gateway-Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」，以（藉由無線或乙太網路纜線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway-Repeater模式？";
+		else if(o=='JS_hint_re_gwre')
+			translated_string="您正準備由Repeater模式切換到Gateway-Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」，以（藉由無線或乙太網路纜線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway-Repeater模式？";
+		else if(o=='JS_hint_gw_gwre')
+			translated_string="您正準備由Gateway模式切換到Gateway-Repeater模式。<br><br>按下確定後，您可以（藉由無線或乙太網路纜線）連結網際網路或進入設定頁面。<br><br>您確定要切換成Gateway-Repeater模式？";
+		else if(o=='JS_hint_gwsta_gwre')
+			translated_string="您確定要切換成Gateway-Repeater模式？";
+
+		else if(o=='JS_hint_gw_ap')
+			translated_string="您正準備由Gateway模式切換到AP模式。<br><br>按下確定後，若要進入設定頁面，請先將您電腦的IP位址更改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成AP模式？";
+		else if(o=='JS_hint_sta_ap')
+			translated_string="您正準備由Adapter模式切換到AP模式。<br><br>按下確定後，請移除您電腦與" + PID_STR + "之間的乙太網路纜線，並將" + PID_STR + "（藉由乙太網路纜線）接上您的區域網路。若要（藉由無線）進入設定頁面，請先將您電腦的IP位址更改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成AP模式？";
+		else if(o=='JS_hint_re_ap')
+			translated_string="您正準備由Repeater模式切換到AP模式。<br><br>按下確定後，請將" + PID_STR + "（藉由乙太網路纜線）重新接上您的區域網路。若要（藉由無線）進入設定頁面，請先將您電腦的IP位址更改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成AP模式？";
+		else if(o=='JS_hint_gwsta_ap')
+			translated_string="您確定要切換成AP模式？";
+		else if(o=='JS_hint_gwre_ap')
+			translated_string="您正準備由Gateway-Repeater模式切換到AP模式。<br><br>按下確定後，請將" + PID_STR + "（藉由乙太網路纜線）重新接上您的區域網路。若要（藉由無線）進入設定頁面，請先將您電腦的IP位址更改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成AP模式？";
+
+		else if(o=='JS_hint_gw_sta')
+			translated_string="您正準備由Gateway模式切換到Adapter模式，<br><br>按下確定後，請以乙太網路纜線連接您的電腦與" + PID_STR + "，並手動將電腦IP位址改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚，始可（藉由乙太網路纜線）重新進入設定頁面。<br><br>您確定要切換成Adapter模式？";
+		else if(o=='JS_hint_ap_sta')
+			translated_string="您正準備由AP模式切換到Adapter模式。<br><br>按下確定後，請以乙太網路纜線連接您的電腦與" + PID_STR + "，並手動將電腦IP位址改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚，始可（藉由乙太網路纜線）重新進入設定頁面。<br><br>您確定要切換成Adapter模式？";
+		else if(o=='JS_hint_re_sta')
+			translated_string="您正準備由Repeater模式切換到Adapter模式。<br><br>按下確定後，請以乙太網路纜線連接您的電腦與" + PID_STR + "，並手動將電腦IP位址改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚，始可（藉由乙太網路纜線）重新進入設定頁面。<br><br>您確定要切換成Adapter模式？";
+		else if(o=='JS_hint_gwsta_sta')
+			translated_string="您確定要切換成Adapter模式？";
+		else if(o=='JS_hint_gwre_sta')
+			translated_string="您正準備由Gateway-Repeater模式切換到Adapter模式。<br><br>按下確定後，請以乙太網路纜線連接您的電腦與" + PID_STR + "，並手動將電腦IP位址改為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚，始可（藉由乙太網路纜線）重新進入設定頁面。<br><br>您確定要切換成Adapter模式？";
+
+		else if(o=='JS_hint_gw_re')
+			translated_string="您正準備由Gateway模式切換到Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」以藉由無線或乙太網路纜線連結網際網路，若要再次進入設定頁面，請將先電腦IP位址設為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成Repeater模式？";
+		else if(o=='JS_hint_ap_re')
+			translated_string="您正準備由AP模式切換到Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」以藉由無線或乙太網路纜線連結網際網路，若要再次進入設定頁面，請將先電腦IP位址設為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成Repeater模式？";
+		else if(o=='JS_hint_sta_re')
+			translated_string="您正準備由Adapter模式切換到Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」以藉由無線或乙太網路纜線連結網際網路，若要再次進入設定頁面，請將先電腦IP位址設為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成Repeater模式？";
+		else if(o=='JS_hint_gwsta_re')
+			translated_string="您確定要切換成Repeater模式？";
+		else if(o=='JS_hint_gwre_re')
+			translated_string="您正準備由Gateway-Repeater模式切換到Repeater模式。<br><br>按下確定後，請將您的IP位址更改為「自動取得IP位址」以藉由無線或乙太網路纜線連結網際網路，若要再次進入設定頁面，請將先電腦IP位址設為" + IP_RNAGE_STR_GLOBAL + "﹙子網路遮罩" + LAN_NETMASK_GLOBAL + "﹚。<br><br>您確定要切換成Repeater模式？";
+			
+		else if(o=='JS_hint_others')
+			translated_string="您確定要儲存設定？";
+
+		else if(o=='JS_hint_autoip')
+			translated_string="若要連接網際網路或無線區域網路，請先將您電腦的IP設定更改為「<strong>自動取得IP位址</strong>」。";
+
+		else if(o=='JS_unsupported')
+			translated_string="不支援此類型的AP！";
+		else if(o=='JS_validstr')
+			translated_string="本字串無法包含";
+		else if(o=='authenticated')
+			translated_string="已連線";
+		else if(o=='connecting')
+			translated_string="連線中";
+		else if(o=='default')
+			translated_string="慣用的無線網路";
+		else if(o=='5')
+			translated_string="非常好";
+		else if(o=='4')
+			translated_string="良好";
+		else if(o=='3')
+			translated_string="好";
+		else if(o=='2')
+			translated_string="尚可";
+		else if(o=='1')
+			translated_string="差";
+        }
+        else if(v=='CN')
+        {
+		if(o=='JS_wpa')
+                	translated_string="您已选择另一种无线认证方式及加密功能，您确定要覆盖吗？";
+                else if(o=='JS_GW_AP')
+                	translated_string='在"家用网关-AP"模式下, 您只能透过无线网路连接局域网！';
+		else if(o=='JS_passzero')
+		        translated_string="WPA预先共享金钥不得少于8个字符!!!如果您将本栏目保留空白，系统将会指定12345678作为您的密码。";
+		else if(o=='JS_wepkey')
+		        translated_string="请输入完整的WEP密钥。\n您可以输入 10 或 26 个十六进制字元 (0~9, a~f, A~F)。";
+		else if(o=='JS_wpapass')
+		        translated_string="WPA预先共享金钥不得多于63个字符!!!";
+		else if(o=='JS_LANG_EN')
+			translated_string="英文";
+		else if(o=='JS_LANG_TW')
+			translated_string="繁体中文";
+		else if(o=='JS_LANG_CN')
+			translated_string="简体中文";
+		else if(o=='JS_LANG_KR')
+			translated_string="韩文";
+
+		else if(o=='JS_hint_ap_gw')
+			translated_string="您正准备由AP模式切换到Gateway模式。<br><br>按下确定后，请将您电脑的IP地址更改为「自动获得IP地址」，始可以无线方式连接设定页面。<br><br>您确定要切换成Gateway模式？";
+		else if(o=='JS_hint_sta_gw')
+			translated_string="您正准备由Adapter模式切换到Gateway模式。<br><br>按下确定后，请移除您电脑与" + PID_STR + "之间的以太网络线。将" + PID_STR + "（藉由以太网络线）连上您的ADSL/Cable Modem。并将您电脑的IP地址更改为「自动获得IP地址」，始可以无线连接进入设定页面。<br><br>您确定要切换成Gateway模式？";
+		else if(o=='JS_hint_re_gw')
+			translated_string="您正准备由Repeater模式切换到Gateway模式。<br><br>按下确定后，请将" + PID_STR + "（藉由以太网络线）重新接上您的局域网。并将您电脑的IP地址更改为「自动获得IP地址」，始可以无线连接连结因特网或进入设定页面。<br><br>您确定要切换成Gateway模式？";
+		else if(o=='JS_hint_gwsta_gw')
+			translated_string="您确定要切换成Gateway模式？";
+		else if(o=='JS_hint_gwre_gw')
+			translated_string="您正准备由Gateway-Repeater模式切换到Gateway模式。<br><br>按下确定后，请将" + PID_STR + "（藉由以太网络线）重新接上您的局域网。并将您电脑的IP地址更改为「自动获得IP地址」，始可以无线连接连结因特网或进入设定页面。<br><br>您确定要切换成Gateway模式？";
+
+		else if(o=='JS_hint_ap_gwre')
+			translated_string="您正准备由AP模式切换到Gateway-Repeater模式。<br><br>按下确定后，请将您电脑的IP地址更改为「自动获得IP地址」，以（藉由无线连接或以太网络线）连结因特网或进入接设定页面。<br><br>您确定要切换成Gateway-Repeater模式？";
+		else if(o=='JS_hint_sta_gwre')
+			translated_string="您正准备由Adapter模式切换到Gateway-Repeater模式。<br><br>按下确定后，请将您电脑的IP地址更改为「自动获得IP地址」，以（藉由无线连接或以太网络线）连结因特网或进入接设定页面。<br><br>您确定要切换成Gateway-Repeater模式？";
+		else if(o=='JS_hint_re_gwre')
+			translated_string="您正准备由Repeater模式切换到Gateway-Repeater模式。<br><br>按下确定后，请将您电脑的IP地址更改为「自动获得IP地址」，以（藉由无线连接或以太网络线）连结因特网或进入接设定页面。<br><br>您确定要切换成Gateway-Repeater模式？";
+		else if(o=='JS_hint_gw_gwre')
+			translated_string="您正准备由Gateway模式切换到Gateway-Repeater模式。<br><br>按下确定后，您可以（藉由无线连接或以太网络线）连结因特网或进入接设定页面。<br><br>您确定要切换成Gateway-Repeater模式？";
+		else if(o=='JS_hint_gwsta_gwre')
+			translated_string="您确定要切换成Gateway-Repeater模式？";
+
+		else if(o=='JS_hint_gw_ap')
+			translated_string="您正准备由Gateway模式切换到AP模式。<br><br>按下确定后，若要进入设定页面，请先将您电脑的IP地址更改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成AP模式？";
+		else if(o=='JS_hint_sta_ap')
+			translated_string="您正准备由Adapter模式切换到AP模式。<br><br>按下确定后，请移除您电脑与" + PID_STR + "之间的以太网络线。将" + PID_STR + "（藉由以太网络线）接上您的局域网。若要（藉由无线连接）进入设定页面，请先将您电脑的IP地址更改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成AP模式？";
+		else if(o=='JS_hint_re_ap')
+			translated_string="您正准备由Repeater模式切换到AP模式。<br><br>按下确定后，请将" + PID_STR + "（藉由以太网络线）重新接上您的局域网。若要（藉由无线连接）进入设定页面，请先将您电脑的IP地址更改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成AP模式？";
+		else if(o=='JS_hint_gwsta_ap')
+			translated_string="您确定要切换成AP模式？";
+		else if(o=='JS_hint_gwre_ap')
+			translated_string="您正准备由Gateway-Repeater模式切换到AP模式。<br><br>按下确定后，请将" + PID_STR + "（藉由以太网络线）重新接上您的局域网。若要（藉由无线连接）进入设定页面，请先将您电脑的IP地址更改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成AP模式？";
+
+		else if(o=='JS_hint_gw_sta')
+			translated_string="您正准备由Gateway模式切换到Adapter模式，<br><br>按下确定后，请以以太网络线连接您的电脑与" + PID_STR + "，并手动将电脑IP地址改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "），始可（藉由以太网络线）重新进入设定页面。<br><br>您确定要切换成Adapter模式？";
+		else if(o=='JS_hint_ap_sta')
+			translated_string="您正准备由AP模式切换到Adapter模式。<br><br>按下确定后，请以以太网络线连接您的电脑与" + PID_STR + "，并手动将电脑IP地址改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "），始可（藉由以太网络线）重新进入设定页面。<br>br>您确定要切换成Adapter模式？";
+		else if(o=='JS_hint_re_sta')
+			translated_string="您正准备由Repeater模式切换到Adapter模式。<br><br>按下确定后，请以以太网络线连接您的电脑与" + PID_STR + "，并手动将电脑IP地址改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "），始可（藉由以太网络线）重新进入设定页面。<br><br>您确定要切换成Adapter模式？";
+		else if(o=='JS_hint_gwsta_sta')
+			translated_string="您确定要切换成Adapter模式？";
+		else if(o=='JS_hint_gwre_sta')
+			translated_string="您正准备由Gateway-Repeater模式切换到Adapter模式。<br><br>按下确定后，请以以太网络线连接您的电脑与" + PID_STR + "，并手动将电脑IP地址改为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "），始可（藉由以太网络线）重新进入设定页面。<br><br>您确定要切换成Adapter模式？";
+
+		else if(o=='JS_hint_gw_re')
+			translated_string="您正准备由Gateway模式切换到Repeater模式。<br><br>按下确定后，请将您的IP地址更改为「自动获得IP地址」以藉由无线连接或以太网络线连结因特网，若要进入设定页面，请先将电脑IP地址设为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成Repeater模式？";
+		else if(o=='JS_hint_ap_re')
+			translated_string="您正准备由AP模式切换到Repeater模式。<br><br>按下确定后，请将您的IP地址更改为「自动获得IP地址」以藉由无线连接或以太网络线连结因特网，若要进入设定页面，请先将电脑IP地址设为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成Repeater模式？";
+		else if(o=='JS_hint_sta_re')
+			translated_string="您正准备由Adapter模式切换到Repeater模式。<br><br>按下确定后，请将您的IP地址更改为「自动获得IP地址」以藉由无线连接或以太网络线连结因特网，若要进入设定页面，请先将电脑IP地址设为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成Repeater模式？";
+		else if(o=='JS_hint_gwsta_re')
+			translated_string="您确定要切换成Repeater模式？";
+		else if(o=='JS_hint_gwre_re')
+			translated_string="您正准备由Gateway-Repeater模式切换到Repeater模式。<br><br>按下确定后，请将您的IP地址更改为「自动获得IP地址」以藉由无线连接或以太网络线连结因特网，若要进入设定页面，请先将电脑IP地址设为" + IP_RNAGE_STR_GLOBAL + "（网络掩码" + LAN_NETMASK_GLOBAL + "）。<br><br>您确定要切换成Repeater模式？";
+			
+		else if(o=='JS_hint_others')
+			translated_string="您确定要储存设定？";
+
+		else if(o=='JS_hint_autoip')
+			translated_string="若要连接因特网或无线局域网，请先将您电脑的IP设定更改为「<strong>自动获得IP地址</strong>」。";
+
+		else if(o=='JS_unsupported')
+			translated_string="不支持此类型的AP！";
+		else if(o=='JS_validstr')
+		        translated_string="本字串无法包含";
+		else if(o=='authenticated')
+			translated_string="已连接";
+		else if(o=='connecting')
+			translated_string="连接中";
+		else if(o=='default')
+			translated_string="惯用的无线网络";
+		else if(o=='5')
+			translated_string="非常好";
+		else if(o=='4')
+			translated_string="良好";
+		else if(o=='3')
+			translated_string="好";
+		else if(o=='2')
+			translated_string="尚可";
+		else if(o=='1')
+			translated_string="差";
+        }
+/*
+        else if(v=='KR')
+        {
+                if(o=='JS_wpa')
+                	translated_string="추가적으로 무선인증방식과 암호화 설정옵션을 선택하였습니다. 정말 덮어쓰기 하시겠습니까?";
+                else if(o=='JS_GW_AP')
+                	translated_string='게이트웨이 "홈 게이트웨이-AP" 모드에서 무선 접속을 통해서만 LAN에 연결할 수 있습니다!';
+		else if(o=='JS_passzero')
+		        translated_string="사전 공유키는 7문자이상이어야 합니다!!! 공란으로 두면 시스템이12345678을 비밀문구로 정하게 됩니다.";
+		else if(o=='JS_wepkey')
+		        translated_string="완벽한 웹 키를 입력하십시오.";
+		else if(o=='JS_wpapass')
+		        translated_string="사전 공유키는 64 문자미만이어야 합니다!!!";
+		else if(o=='JS_LANG_EN')
+			translated_string="영어";
+		else if(o=='JS_LANG_TW')
+			translated_string="대만어 (번체)";
+		else if(o=='JS_LANG_CN')
+			translated_string="중국어 (간체)";
+		else if(o=='JS_LANG_KR')
+			translated_string="한국어";
+
+		else if(o=='JS_hint_ap_gw')
+			translated_string="You are preparing to switch AP mode to Gateway mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_sta_gw')
+			translated_string="You are preparing to switch Adapter mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_re_gw')
+			translated_string="You are preparing to switch Repeater mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_gwsta_gw')
+			translated_string="Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_gwre_gw')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+
+		else if(o=='JS_hint_ap_gwre')
+			translated_string="You are preparing to switch AP mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_sta_gwre')
+			translated_string="You are preparing to switch Adapter mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_re_gwre')
+			translated_string="You are preparing to switch Repeater mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_gw_gwre')
+			translated_string="You are preparing to switch Gateway mode to Gateway-Repeater mode.<br><br>After clicking 'OK', you can connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_gwsta_gwre')
+			translated_string="Do you determine to switch to Gateway-Repeater mode?";
+
+		else if(o=='JS_hint_gw_ap')
+			translated_string="You are preparing to switch Gateway mode to AP mode.<br><br>After clicking 'OK', if you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_sta_ap')
+			translated_string="You are preparing to switch Adapter mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_re_ap')
+			translated_string="You are preparing to switch Repeater mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_gwsta_ap')
+			translated_string="Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_gwre_ap')
+			translated_string="You are preparing to switch Gateway-Repeater mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+
+		else if(o=='JS_hint_gw_sta')
+			translated_string="You are preparing to switch Gateway mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_ap_sta')
+			translated_string="You are preparing to switch AP mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_re_sta')
+			translated_string="You are preparing to switch Repeater mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_gwsta_sta')
+			translated_string="Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_gwre_sta')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+
+		else if(o=='JS_hint_gw_re')
+			translated_string="You are preparing to switch Gateway mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_ap_re')
+			translated_string="You are preparing to switch AP mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_sta_re')
+			translated_string="You are preparing to switch Adapter mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_gwsta_re')
+			translated_string="Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_gwre_re')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+			
+		else if(o=='JS_hint_others')
+			translated_string="Are you sure to save settings?";
+
+		else if(o=='JS_hint_autoip')
+			translated_string="If you want to connect to Internet or WLAN, please set your IP configuration as '<strong>Obtain an IP address automatically</strong>'.";
+
+		else if(o=='JS_unsupported')
+			translated_string="Unsupported AP teyp!";
+		else if(o=='JS_validstr')
+		        translated_string="문자열에 포함될 수 없는 문자";
+		else if(o=='authenticated')
+			translated_string="Connected";
+		else if(o=='connecting')
+			translated_string="Connecting";
+		else if(o=='default')
+			translated_string="Preferred Wireless Network";
+		else if(o=='5')
+			translated_string="Very Strong";
+		else if(o=='4')
+			translated_string="Strong";
+		else if(o=='3')
+			translated_string="Good";
+		else if(o=='2')
+			translated_string="Acceptable";
+		else if(o=='1')
+			translated_string="Poor";
+	}
+*/
+        else
+        {
+                if(o=='JS_wpa')
+                	translated_string="You have chosen an additional wireless authenication and encryption option, do you really like to overwrite it?";
+                else if(o=='JS_GW_AP')
+                	translated_string='You can only connect to LAN through Wireless access in "Home Gateway-AP" mode!';
+		else if(o=='JS_passzero')
+		        translated_string="WPA Pre-shared key should be more than 7 characters!!! If you leave this field blank, system will assign 12345678 as your passphrase.";
+		else if(o=='JS_wepkey')
+		        translated_string="Please enter the complete WEP key.\nYou can enter 10 or 26 HEX characters (0~9, a~f, A~F).";
+		else if(o=='JS_wpapass')
+		        translated_string="WPA Pre-shared key should be less than 64 characters!!!";
+		else if(o=='JS_LANG_EN')
+			translated_string="English";
+		else if(o=='JS_LANG_TW')
+			translated_string="Traditional Chinese";
+		else if(o=='JS_LANG_CN')
+			translated_string="Simplified Chinese";
+		else if(o=='JS_LANG_KR')
+			translated_string="Korean";
+
+		else if(o=='JS_hint_ap_gw')
+			translated_string="You are preparing to switch AP mode to Gateway mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_sta_gw')
+			translated_string="You are preparing to switch Adapter mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_re_gw')
+			translated_string="You are preparing to switch Repeater mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_gwsta_gw')
+			translated_string="Do you determine to switch to Gateway mode?";
+		else if(o=='JS_hint_gwre_gw')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Gateway mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. Then set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through wireless access).<br><br>Do you determine to switch to Gateway mode?";
+
+		else if(o=='JS_hint_ap_gwre')
+			translated_string="You are preparing to switch AP mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_sta_gwre')
+			translated_string="You are preparing to switch Adapter mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_re_gwre')
+			translated_string="You are preparing to switch Repeater mode to Gateway-Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_gw_gwre')
+			translated_string="You are preparing to switch Gateway mode to Gateway-Repeater mode.<br><br>After clicking 'OK', you can connect to Internet or enter Quick Setup (through Ethernet cable or wireless access).<br><br>Do you determine to switch to Gateway-Repeater mode?";
+		else if(o=='JS_hint_gwsta_gwre')
+			translated_string="Do you determine to switch to Gateway-Repeater mode?";
+
+		else if(o=='JS_hint_gw_ap')
+			translated_string="You are preparing to switch Gateway mode to AP mode.<br><br>After clicking 'OK', if you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_sta_ap')
+			translated_string="You are preparing to switch Adapter mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_re_ap')
+			translated_string="You are preparing to switch Repeater mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_gwsta_ap')
+			translated_string="Do you determine to switch to AP mode?";
+		else if(o=='JS_hint_gwre_ap')
+			translated_string="You are preparing to switch Gateway-Repeater mode to AP mode.<br><br>After clicking 'OK', connect one end of the supplied Ethernet cable to the Ethernet port of the device and the other end to the Ethernet port of local network. If you want to enter Quick Setup (through wireless access), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to AP mode?";
+
+		else if(o=='JS_hint_gw_sta')
+			translated_string="You are preparing to switch Gateway mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_ap_sta')
+			translated_string="You are preparing to switch AP mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_re_sta')
+			translated_string="You are preparing to switch Repeater mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Quick Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_gwsta_sta')
+			translated_string="Do you determine to switch to Adapter mode?";
+		else if(o=='JS_hint_gwre_sta')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Adapter mode.<br><br>After clicking 'OK', please connect one end of the supplied Ethernet cable to the Ethernet port of the your PC and the other end to the Ethernet port of " + PID_STR + " . If you want to enter Setup (through Ethernet cable), please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Adapter mode?";
+
+		else if(o=='JS_hint_gw_re')
+			translated_string="You are preparing to switch Gateway mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_ap_re')
+			translated_string="You are preparing to switch AP mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_sta_re')
+			translated_string="You are preparing to switch Adapter mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_gwsta_re')
+			translated_string="Do you determine to switch to Repeater mode?";
+		else if(o=='JS_hint_gwre_re')
+			translated_string="You are preparing to switch Gateway-Repeater mode to Repeater mode.<br><br>After clicking 'OK', please set your IP configuration as 'Obtain an IP address automatically' to connect to Internet (through Ethernet cable or wireless access). If you want to enter Quick Setup again, then please set your PC's IP address to " + IP_RNAGE_STR_GLOBAL + " (The Subnet Mask is " + LAN_NETMASK_GLOBAL + ").<br><br>Do you determine to switch to Repeater mode?";
+			
+		else if(o=='JS_hint_others')
+			translated_string="Are you sure to save settings?";
+
+		else if(o=='JS_hint_autoip')
+			translated_string="If you want to connect to Internet or WLAN, please set your IP configuration as '<strong>Obtain an IP address automatically</strong>'.";
+
+		else if(o=='JS_unsupported')
+			translated_string="Unsupported AP teyp!";
+		else if(o=='JS_validstr')
+		        translated_string="This string can not contain";
+		else if(o=='authenticated')
+			translated_string="Connected";
+		else if(o=='connecting')
+			translated_string="Connecting";
+		else if(o=='default')
+			translated_string="Preferred Wireless Network";
+		else if(o=='5')
+			translated_string="Very Strong";
+		else if(o=='4')
+			translated_string="Strong";
+		else if(o=='3')
+			translated_string="Good";
+		else if(o=='2')
+			translated_string="Acceptable";
+		else if(o=='1')
+			translated_string="Poor";
+        }
+        return translated_string;
+}
+
+function intoa(ip)
+{
+	n=0;
+	vip=0;
+
+	for(i=0;i<ip.length;i++)
+	{
+	   c = ip.charAt(i);
+
+	   if (c == '.')
+	   {
+	      vip = vip * 256 + n;
+	      n = 0;
+	   }
+	   else if(c>='0' && c<='9')
+     	   {
+       	      n = n*10 + (c-'0');
+       	   }
+        }
+        vip = vip*256 + n;
+	return(vip);
+}
+
+function get_ip_str(ip_int)
+{
+	v4=ip_int%0x100;
+	v3=((ip_int-v4)/0x100)%0x100;
+	v2=((ip_int-v4-v3*0x100)/0x10000)%0x100;
+	v1=((ip_int-v4-v3*0x100-v2*0x10000)/(0x1000000))%0x100;
+	
+	return v1+"."+v2+"."+v3+"."+v4;
+}
+
+function lip_range(ip, nm, lang) {
+	nip=	intoa(ip);
+	nnm=	intoa(nm);
+	bs=0;
+	bs2=0;
+	rem=0;
+	rem2=0;
+	diff=0;
+	diff2=0;
+	i=0;
+
+	if (lang=='TW')
+		or_str=' 或 ';
+	else if (lang=='CN')
+		or_str=' 或 ';
+	else
+		or_str=' or ';
+
+	for (bs=nip, bs2=nnm; rem2==0; bs-=rem, bs=bs/2, bs2-=rem2, bs2=bs2/2, i++)
+	{
+		rem=bs%2;
+		rem2=bs2%2;
+		if (rem2==0)
+			diff=diff + (rem<<i);
+	}
+	diff2=((1<<(i-1))-1);
+	
+	lip_start=nip-diff+1;
+	lip_end=lip_start+ diff2-2;
+/*	
+	alert(get_ip_str(lip_start));
+	alert(get_ip_str(nip-1));
+	alert(get_ip_str(nip+1));
+	alert(get_ip_str(lip_end));
+*/	
+	if (nip==lip_start)
+	{
+		ip_range_str=get_ip_str(lip_start+1) + ' ~ ' + get_ip_str(lip_end);
+	}
+	else if (nip==lip_end)
+	{
+		ip_range_str=get_ip_str(lip_start) + ' ~ ' + get_ip_str(lip_end-1);
+	}
+	else
+	{
+		if (lip_start!=nip-1)
+		{
+			ip_range_str=get_ip_str(lip_start) + ' ~ ' + get_ip_str(nip-1);
+		}
+		else
+		{
+			ip_range_str=get_ip_str(lip_start);
+		}
+
+		ip_range_str += or_str;
+			
+		if (nip+1!=lip_end)
+		{
+			ip_range_str += (get_ip_str(nip+1) + ' ~ ' + get_ip_str(lip_end));
+		}
+		else
+		{
+			ip_range_str += get_ip_str(nip+1);
+		}
+	}
+
+	return ip_range_str;
+}
+
+function inputCtrl(o, flag)
+{
+    if (flag == 0)
+    {
+       o.disabled = 1;
+       o.style.backgroundColor = "gray";
+    }
+    else
+    {
+       o.disabled = 0;
+       o.style.backgroundColor = "white";
+    }
+}
+
+function submit_gateway_SP()
+{
+	if(document.form.op_mode.value=="gw-repeater")
+		submit_ure_SP();
+	else
+		submit_gateway();
+}
+
+function submit_gateway()
+{
+	inputCtrl(document.form.op_mode, 0);
+	inputCtrl(document.form.wl_mode_EX, 0);
+	inputCtrl(document.form.preferred_lang, 0);
+	inputCtrl(document.form.LANIP, 0);
+	inputCtrl(document.form.LANNM, 0);
+
+	if(document.form.op_mode.value=="gw-repeater")
+	{
+		inputCtrl(document.form.sta_state, 0);
+
+		inputCtrl(document.form.wf1_ssid, 0);
+		inputCtrl(document.form.wf2_ssid, 0);
+		inputCtrl(document.form.wf3_ssid, 0);
+		inputCtrl(document.form.wf4_ssid, 0);
+		inputCtrl(document.form.wf1_key, 0);
+		inputCtrl(document.form.wf2_key, 0);
+		inputCtrl(document.form.wf3_key, 0);
+		inputCtrl(document.form.wf4_key, 0);
+		inputCtrl(document.form.wf1_passwd, 0);
+		inputCtrl(document.form.wf2_passwd, 0);
+		inputCtrl(document.form.wf3_passwd, 0);
+		inputCtrl(document.form.wf4_passwd, 0);
+
+		inputCtrl(document.form.wl_guest_auth_mode_1_org, 0);
+		inputCtrl(document.form.wl_guest_wpa_mode_org, 0);
+		inputCtrl(document.form.wl_guest_crypto_1_org, 0);
+		inputCtrl(document.form.wl_guest_wpa_psk_1_org, 0);
+		inputCtrl(document.form.wl_guest_wep_x_1_org, 0);
+		inputCtrl(document.form.wl_guest_key1_1_org, 0);
+		inputCtrl(document.form.wl_guest_key2_1_org, 0);
+		inputCtrl(document.form.wl_guest_key3_1_org, 0);
+		inputCtrl(document.form.wl_guest_key4_1_org, 0);
+		inputCtrl(document.form.wl_guest_key_1_org, 0);
+	}
+
+	document.form.wl_ssid.value = document.form.ssid.value;
+	document.form.wl_ssid2.value = encodeURIComponent(document.form.wl_ssid.value);
+	document.form.mssid_ssid_x0.value = document.form.wl_ssid.value;
+	document.form.mssid_ssid_2_x0.value = encodeURIComponent(document.form.wl_ssid.value);
+
+	if (document.form.SecurityLevel.value=="1" || document.form.SecurityLevel.value=="2")
+	{
+		document.form.wl_key1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key2.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key3.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key4.value=document.form.wl_wpa_psk.value;
+	}
+
+	document.form.action_mode.value = '  Save  ';
+	document.form.submit();	
+}
+
+function submit_gateway_re()
+{
+	inputCtrl(document.form.wl_guest_auth_mode_1_org, 0);
+	inputCtrl(document.form.wl_guest_wpa_mode_org, 0);
+	inputCtrl(document.form.wl_guest_crypto_1_org, 0);
+	inputCtrl(document.form.wl_guest_wpa_psk_1_org, 0);
+	inputCtrl(document.form.wl_guest_wep_x_1_org, 0);
+	inputCtrl(document.form.wl_guest_key1_1_org, 0);
+	inputCtrl(document.form.wl_guest_key2_1_org, 0);
+	inputCtrl(document.form.wl_guest_key3_1_org, 0);
+	inputCtrl(document.form.wl_guest_key4_1_org, 0);
+	inputCtrl(document.form.wl_guest_key_1_org, 0);
+	
+	document.form.wl_guest_ssid_1.value = document.form.ssid.value;
+	document.form.wl_guest_ssid_2.value = encodeURIComponent(document.form.wl_guest_ssid_1.value);
+//	document.form.mssid_ssid_x0.value = document.form.wl_ssid.value;
+//	document.form.mssid_ssid_2_x0.value = encodeURIComponent(document.form.wl_ssid.value);
+
+	document.form.wl_guest_auth_mode_1.value=document.form.wl_auth_mode.value;
+	document.form.wl_guest_wpa_mode.value=document.form.wl_wpa_mode.value;
+	document.form.wl_guest_crypto_1.value=document.form.wl_crypto.value;
+	document.form.wl_guest_wpa_psk_1.value=document.form.wl_wpa_psk.value;
+	document.form.wl_guest_wep_x_1.value=document.form.wl_wep_x.value;
+	document.form.wl_guest_key1_1.value=document.form.wl_key1.value;
+	document.form.wl_guest_key2_1.value=document.form.wl_key2.value;
+	document.form.wl_guest_key3_1.value=document.form.wl_key3.value;
+	document.form.wl_guest_key4_1.value=document.form.wl_key4.value;
+	document.form.wl_guest_key_1.value=document.form.wl_key.value;
+
+	if (document.form.SecurityLevel.value=="1" || document.form.SecurityLevel.value=="2")
+	{
+		document.form.wl_guest_key1_1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_guest_key2_1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_guest_key3_1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_guest_key4_1.value=document.form.wl_wpa_psk.value;
+	}
+
+	inputCtrl(document.form.wl_ssid, 0);
+	inputCtrl(document.form.wl_ssid2, 0);
+	inputCtrl(document.form.wl_auth_mode, 0);
+	inputCtrl(document.form.wl_wpa_mode, 0);
+	inputCtrl(document.form.wl_crypto, 0);
+	inputCtrl(document.form.wl_wpa_psk, 0);
+	inputCtrl(document.form.wl_wep_x, 0);
+	inputCtrl(document.form.wl_key1, 0);
+	inputCtrl(document.form.wl_key2, 0);
+	inputCtrl(document.form.wl_key3, 0);
+	inputCtrl(document.form.wl_key4, 0);
+	inputCtrl(document.form.wl_key, 0);
+}
+
+function submit_sta()
+{
+	document.form.wl_ssid.value = AP_status[select_idx][0];
+	document.form.wl_ssid2.value = encodeURIComponent(document.form.wl_ssid.value);
+	document.form.mssid_ssid_x0.value = document.form.wl_ssid.value;
+	document.form.mssid_ssid_2_x0.value = encodeURIComponent(document.form.wl_ssid.value);
+
+	if (document.form.wl_ssid.value==document.form.wf1_ssid.value)
+		document.form.wl_key.value=document.form.wf1_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf2_ssid.value)
+		document.form.wl_key.value=document.form.wf2_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf3_ssid.value)
+		document.form.wl_key.value=document.form.wf3_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf4_ssid.value)
+		document.form.wl_key.value=document.form.wf4_key.value;
+
+	inputCtrl(document.form.op_mode, 0);
+	inputCtrl(document.form.wl_mode_EX, 0);
+	inputCtrl(document.form.sta_state, 0);
+	inputCtrl(document.form.preferred_lang, 0);
+	inputCtrl(document.form.LANIP, 0);
+	inputCtrl(document.form.LANNM, 0);
+
+	inputCtrl(document.form.wf1_ssid, 0);
+	inputCtrl(document.form.wf2_ssid, 0);
+	inputCtrl(document.form.wf3_ssid, 0);
+	inputCtrl(document.form.wf4_ssid, 0);
+	inputCtrl(document.form.wf1_key, 0);
+	inputCtrl(document.form.wf2_key, 0);
+	inputCtrl(document.form.wf3_key, 0);
+	inputCtrl(document.form.wf4_key, 0);
+	inputCtrl(document.form.wf1_passwd, 0);
+	inputCtrl(document.form.wf2_passwd, 0);
+	inputCtrl(document.form.wf3_passwd, 0);
+	inputCtrl(document.form.wf4_passwd, 0);
+
+	var ap_crypto=-1;
+	ap_crypto=AP_status[select_idx][2];
+
+	if (document.form.no_ask_password.value=="1")	// use settings in profile list
+	{
+		if (ap_crypto==8 || ap_crypto==9)
+			document.form.wl_crypto.value="tkip+aes";
+		else if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto.value="tkip";
+		else
+			document.form.wl_crypto.value="aes";
+	}
+	else if (ap_crypto==0)
+	{
+		document.form.wl_auth_mode.value="open";
+		document.form.wl_wep_x.value="0";
+	}
+	else if (ap_crypto==1)
+	{
+		document.form.wl_auth_mode.value="open";
+		if (document.form.wl_wpa_psk.value.length==10)
+			document.form.wl_wep_x.value="1";
+		else
+			document.form.wl_wep_x.value="2";
+		
+		document.form.wl_key1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key2.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key3.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key4.value=document.form.wl_wpa_psk.value;
+	}
+	else if (	ap_crypto==2 ||
+			ap_crypto==3 ||
+			ap_crypto==4 ||
+			ap_crypto==5 ||
+			ap_crypto==8 ||
+			ap_crypto==9
+	)
+	{
+		document.form.wl_auth_mode.value="psk";
+		document.form.wl_wep_x.value="0";
+
+		if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto.value="tkip";
+		else if (ap_crypto==3 || ap_crypto==5)
+			document.form.wl_crypto.value="aes";
+		else
+			document.form.wl_crypto.value="tkip+aes";
+
+		if (ap_crypto==2 || ap_crypto==3 || ap_crypto==8)
+			document.form.wl_wpa_mode.value="1";
+		else
+			document.form.wl_wpa_mode.value="2";
+	}
+
+	document.form.action_mode.value = '  Save  ';
+	document.form.submit();	
+}
+
+function submit_ure()
+{
+	document.form.wl_ssid.value = AP_status[select_idx][0];
+	document.form.wl_ssid2.value = encodeURIComponent(document.form.wl_ssid.value);
+	document.form.mssid_ssid_x0.value = document.form.wl_ssid.value;
+	document.form.mssid_ssid_2_x0.value = encodeURIComponent(document.form.wl_ssid.value);
+
+	if (document.form.wl_ssid.value==document.form.wf1_ssid.value)
+		document.form.wl_key.value=document.form.wf1_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf2_ssid.value)
+		document.form.wl_key.value=document.form.wf2_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf3_ssid.value)
+		document.form.wl_key.value=document.form.wf3_key.value;
+	else if (document.form.wl_ssid.value==document.form.wf4_ssid.value)
+		document.form.wl_key.value=document.form.wf4_key.value;
+
+	inputCtrl(document.form.op_mode, 0);
+	inputCtrl(document.form.wl_mode_EX, 0);
+	inputCtrl(document.form.sta_state, 0);
+	inputCtrl(document.form.preferred_lang, 0);
+	inputCtrl(document.form.LANIP, 0);
+	inputCtrl(document.form.LANNM, 0);
+
+	inputCtrl(document.form.wf1_ssid, 0);
+	inputCtrl(document.form.wf2_ssid, 0);
+	inputCtrl(document.form.wf3_ssid, 0);
+	inputCtrl(document.form.wf4_ssid, 0);
+	inputCtrl(document.form.wf1_key, 0);
+	inputCtrl(document.form.wf2_key, 0);
+	inputCtrl(document.form.wf3_key, 0);
+	inputCtrl(document.form.wf4_key, 0);
+	inputCtrl(document.form.wf1_passwd, 0);
+	inputCtrl(document.form.wf2_passwd, 0);
+	inputCtrl(document.form.wf3_passwd, 0);
+	inputCtrl(document.form.wf4_passwd, 0);
+
+	var ap_crypto=-1;
+	ap_crypto=AP_status[select_idx][2];
+
+	if (document.form.no_ask_password.value=="1")	// use settings in profile list
+	{
+		if (ap_crypto==8 || ap_crypto==9)
+			document.form.wl_crypto.value="tkip+aes";
+		else if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto.value="tkip";
+		else
+			document.form.wl_crypto.value="aes";
+	}
+	else if (ap_crypto==0)
+	{
+		document.form.wl_auth_mode.value="open";
+		document.form.wl_wep_x.value="0";
+	}
+	else if (ap_crypto==1)
+	{
+		document.form.wl_auth_mode.value="open";
+		if (document.form.wl_wpa_psk.value.length==10)
+			document.form.wl_wep_x.value="1";
+		else
+			document.form.wl_wep_x.value="2";
+		
+		document.form.wl_key1.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key2.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key3.value=document.form.wl_wpa_psk.value;
+		document.form.wl_key4.value=document.form.wl_wpa_psk.value;
+	}
+	else if (	ap_crypto==2 ||
+			ap_crypto==3 ||
+			ap_crypto==4 ||
+			ap_crypto==5 ||
+			ap_crypto==8 ||
+			ap_crypto==9
+	)
+	{
+		document.form.wl_auth_mode.value="psk";
+		document.form.wl_wep_x.value="0";
+
+		if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto.value="tkip";
+		else if (ap_crypto==3 || ap_crypto==5)
+			document.form.wl_crypto.value="aes";
+		else
+			document.form.wl_crypto.value="tkip+aes";
+
+		if (ap_crypto==2 || ap_crypto==3 || ap_crypto==8)
+			document.form.wl_wpa_mode.value="1";
+		else
+			document.form.wl_wpa_mode.value="2";
+	}
+
+	document.form.action_mode.value = '  Save  ';
+	document.form.submit();	
+}
+
+function submit_ure_SP()
+{
+	document.form.wl_ssid_ure.value = AP_status[select_idx][0];
+	document.form.wl_ssid2_ure.value = encodeURIComponent(document.form.wl_ssid_ure.value);
+//	document.form.mssid_ssid_x0.value = document.form.wl_ssid.value;
+//	document.form.mssid_ssid_2_x0.value = encodeURIComponent(document.form.wl_ssid.value);
+
+	if (document.form.wl_ssid_ure.value==document.form.wf1_ssid.value)
+		document.form.wl_key_ure.value=document.form.wf1_key.value;
+	else if (document.form.wl_ssid_ure.value==document.form.wf2_ssid.value)
+		document.form.wl_key_ure.value=document.form.wf2_key.value;
+	else if (document.form.wl_ssid_ure.value==document.form.wf3_ssid.value)
+		document.form.wl_key_ure.value=document.form.wf3_key.value;
+	else if (document.form.wl_ssid_ure.value==document.form.wf4_ssid.value)
+		document.form.wl_key_ure.value=document.form.wf4_key.value;
+
+	inputCtrl(document.form.op_mode, 0);
+	inputCtrl(document.form.wl_mode_EX, 0);
+	inputCtrl(document.form.sta_state, 0);
+	inputCtrl(document.form.preferred_lang, 0);
+	inputCtrl(document.form.LANIP, 0);
+	inputCtrl(document.form.LANNM, 0);
+
+	inputCtrl(document.form.wf1_ssid, 0);
+	inputCtrl(document.form.wf2_ssid, 0);
+	inputCtrl(document.form.wf3_ssid, 0);
+	inputCtrl(document.form.wf4_ssid, 0);
+	inputCtrl(document.form.wf1_key, 0);
+	inputCtrl(document.form.wf2_key, 0);
+	inputCtrl(document.form.wf3_key, 0);
+	inputCtrl(document.form.wf4_key, 0);
+	inputCtrl(document.form.wf1_passwd, 0);
+	inputCtrl(document.form.wf2_passwd, 0);
+	inputCtrl(document.form.wf3_passwd, 0);
+	inputCtrl(document.form.wf4_passwd, 0);
+
+	var ap_crypto=-1;
+	ap_crypto=AP_status[select_idx][2];
+
+	if (document.form.no_ask_password.value=="1")	// use settings in profile list
+	{
+		if (ap_crypto==8 || ap_crypto==9)
+			document.form.wl_crypto.value="tkip+aes";
+		else if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto.value="tkip";
+		else
+			document.form.wl_crypto.value="aes";
+	}
+	else if (ap_crypto==0)
+	{
+		document.form.wl_auth_mode_ure.value="open";
+		document.form.wl_wep_x_ure.value="0";
+	}
+	else if (ap_crypto==1)
+	{
+		document.form.wl_auth_mode_ure.value="open";
+		if (document.form.wl_wpa_psk_ure.value.length==10)
+			document.form.wl_wep_x_ure.value="1";
+		else
+			document.form.wl_wep_x_ure.value="2";
+		
+		document.form.wl_key1_ure.value=document.form.wl_wpa_psk_ure.value;
+		document.form.wl_key2_ure.value=document.form.wl_wpa_psk_ure.value;
+		document.form.wl_key3_ure.value=document.form.wl_wpa_psk_ure.value;
+		document.form.wl_key4_ure.value=document.form.wl_wpa_psk_ure.value;
+	}
+	else if (	ap_crypto==2 ||
+			ap_crypto==3 ||
+			ap_crypto==4 ||
+			ap_crypto==5 ||
+			ap_crypto==8 ||
+			ap_crypto==9
+	)
+	{
+		document.form.wl_auth_mode_ure.value="psk";
+		document.form.wl_wep_x_ure.value="0";
+
+		if (ap_crypto==2 || ap_crypto==4)
+			document.form.wl_crypto_ure.value="tkip";
+		else if (ap_crypto==3 || ap_crypto==5)
+			document.form.wl_crypto_ure.value="aes";
+		else
+			document.form.wl_crypto_ure.value="tkip+aes";
+
+		if (ap_crypto==2 || ap_crypto==3 || ap_crypto==8)
+			document.form.wl_wpa_mode_ure.value="1";
+		else
+			document.form.wl_wpa_mode_ure.value="2";
+	}
+
+	submit_gateway_re();
+
+	document.form.action_mode.value = '  Save  ';
+	document.form.submit();	
+}

@@ -1,0 +1,86 @@
+init/do_mounts.o: init/do_mounts.c \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/fd.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/nfs_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/nfs_fs_sb.h \
+   /root/WL330gE/src/linux/linux/include/linux/nfs_mount.h \
+   /root/WL330gE/src/linux/linux/include/linux/minix_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext2_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/romfs_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/cramfs_fs.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/dev/initrd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arch/s390.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/cpq/da.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/cpq/da/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/cpq/ciss/da.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/cpq/ciss/da/module.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtd/block.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtd/block/ro.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/dev/dummy.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/root/nfs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/dev/ram.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/dev/fd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ppc/iseries.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/devfs/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/all/ppc.h) \
+   /root/WL330gE/src/linux/linux/include/../lib/inflate.c
+init/main.o: init/main.c \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/unistd.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/utsname.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/blk.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/linux/iobuf.h \
+   /root/WL330gE/src/linux/linux/include/linux/bootmem.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/bugs.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arch/s390.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dio.h) \
+   /root/WL330gE/src/linux/linux/include/linux/dio.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/zorro.h) \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nubus.h) \
+   /root/WL330gE/src/linux/linux/include/linux/nubus.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/isapnp.h) \
+   /root/WL330gE/src/linux/linux/include/linux/isapnp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/irda.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/x86/local/apic.h) \
+   /root/WL330gE/src/linux/linux/include/asm/smp.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/tc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysvipc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bcm947xx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/hwsim.h) \
+   /root/WL330gE/src/linux/linux/include/asm/time.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smp.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/modules.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/blk/dev/initrd.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ppc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mca.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arch/acorn.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pcmcia.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/noroot.h)
+init/version.o: init/version.c \
+   /root/WL330gE/src/linux/linux/include/linux/uts.h \
+   /root/WL330gE/src/linux/linux/include/linux/utsname.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/compile.h

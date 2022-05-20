@@ -1,0 +1,19 @@
+hwacpi.o: hwacpi.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h
+hwgpe.o: hwgpe.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h
+hwregs.o: hwregs.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+hwsleep.o: hwsleep.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h
+hwtimer.o: hwtimer.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/achware.h

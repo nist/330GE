@@ -1,0 +1,60 @@
+21142.o: 21142.c \
+   tulip.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h
+eeprom.o: eeprom.c \
+   tulip.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h
+interrupt.o: interrupt.c \
+   tulip.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/hw/flowcontrol.h)
+media.o: media.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mii.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   tulip.h
+pnic2.o: pnic2.c \
+   tulip.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h
+pnic.o: pnic.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   tulip.h
+timer.o: timer.c \
+   tulip.h
+tulip_core.o: tulip_core.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   tulip.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/etherdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/mii.h \
+   /root/WL330gE/src/linux/linux/include/linux/ethtool.h \
+   /root/WL330gE/src/linux/linux/include/linux/crc32.h \
+   /root/WL330gE/src/linux/linux/include/asm/unaligned.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/hw/flowcontrol.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/tulip/mwi.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ddb5476.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ddb5477.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/cobalt.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h)
+tulip.h: \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/netdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/tulip/mmio.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/net/hw/flowcontrol.h)
+	@touch tulip.h
+.PRECIOUS:	tulip.h \
+

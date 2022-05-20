@@ -1,0 +1,96 @@
+balloc.o: balloc.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/quotaops.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/jbd/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ext3/check.h)
+bitmap.o: bitmap.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h
+dir.o: dir.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h
+file.o: file.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h
+fsync.o: fsync.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h
+ialloc.o: ialloc.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/quotaops.h \
+   /root/WL330gE/src/linux/linux/include/asm/bitops.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ext3/check.h)
+inode.o: inode.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/highuid.h \
+   /root/WL330gE/src/linux/linux/include/linux/quotaops.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/quota.h)
+ioctl.o: ioctl.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/jbd/debug.h)
+namei.o: namei.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/fcntl.h \
+   /root/WL330gE/src/linux/linux/include/linux/stat.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/quotaops.h
+super.o: super.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/locks.h \
+   /root/WL330gE/src/linux/linux/include/linux/blkdev.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/random.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/jbd/debug.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ext3/check.h)
+symlink.o: symlink.c \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/jbd.h \
+   /root/WL330gE/src/linux/linux/include/linux/ext3_fs.h

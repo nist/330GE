@@ -1,0 +1,50 @@
+# 4705 board with 5397 switch
+boardtype=0x478
+boardnum=${serno}
+# Board revision 1.0
+boardrev=0x10
+# ENETVLAN, ENETROBO.
+boardflags=0x110
+
+# MIPS clock frequency in MHz
+clkfreq=300
+
+# 64 MB DDR SDRAM (16 Meg x 16 x 2)
+sdram_init=0x0009
+sdram_config=0x0062
+sdram_refresh=0x0000
+sdram_ncdl=0
+
+# Ethernet 
+et0macaddr=00:90:4c:a6:${maclo}
+et0phyaddr=30
+et0mdcport=0
+
+# Watchdog timer in ms
+watchdog=3000
+
+# Reset 
+reset_gpio=7
+
+# Variables used by CFE and run-time OS image
+# which may be modified by the run-time OS image
+lan_ipaddr=192.168.1.1
+lan_netmask=255.255.255.0
+
+# PCI specific
+cardbus=1
+
+# Ethernet switch config (vlan1:LAN, vlan2:WAN)
+vlan1ports=1 2 3 4 8*
+vlan1hwname=et0
+vlan2ports=0 8u
+
+# bootloader/OS glue
+landevs=vlan1 wl0
+wandevs=et0
+lan_ipaddr=192.168.1.1
+lan_netmask=255.255.255.0
+
+# CFE variables
+boot_wait=on
+wait_time=5

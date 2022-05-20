@@ -1,0 +1,24 @@
+#
+# ASUSTek Linux Router Configuration
+#
+# Copyright 2004, ASUSTek COMPUTER INC.
+# All Rights Reserved.
+# 
+# THIS SOFTWARE IS OFFERED "AS IS", AND ASUSTek GRANTS NO WARRANTIES OF ANY
+# KIND, EXPRESS OR IMPLIED, BY STATUTE, COMMUNICATION OR OTHERWISE. BROADCOM
+# SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A SPECIFIC PURPOSE OR NONINFRINGEMENT CONCERNING THIS SOFTWARE.
+#
+# $Id: README_ASUS,v 1.1.1.1 2007/01/25 12:52:13 jiahao_jhou Exp $
+#
+
+* Introduction
+
+To compile the ASUSTek Linux Router package, you must have installed
+original package, please refer to README.
+
+** Make Images
+                                                                                                               
+To generate images for ASUSTek Linux Access Point(WL330gE), type
+"make image-WL330gE"
+

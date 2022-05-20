@@ -1,0 +1,50 @@
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307 USA
+ */
+/*
+ * This file is subject to the terms and conditions of the GNU General Public
+ * License.  See the file "COPYING" in the main directory of this archive
+ * for more details.
+ *
+ * Copyright (C) 2001 Keith M Wesolowski
+ * Copyright (C) 2001 Paul Mundt
+ */
+#include <linux/init.h>
+
+#include <asm/reboot.h>
+#include <asm/sgialib.h>
+
+static void ip32_machine_restart(char *cmd)
+{
+	ArcReboot();
+}
+
+static inline void ip32_machine_halt(void)
+{
+	ArcEnterInteractiveMode();
+}
+
+static void ip32_machine_power_off(void)
+{
+	ip32_machine_halt();
+}
+
+void __init ip32_reboot_setup(void)
+{
+	_machine_restart = ip32_machine_restart;
+	_machine_halt = ip32_machine_halt;
+	_machine_power_off = ip32_machine_power_off;
+}

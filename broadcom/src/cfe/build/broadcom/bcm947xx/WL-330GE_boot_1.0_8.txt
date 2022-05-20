@@ -1,0 +1,169 @@
+# NVRAM board text file for Asus WL-520GU board
+#
+# Copyright 2006, Broadcom Corporation
+# All Rights Reserved.
+#
+# THIS SOFTWARE IS OFFERED "AS IS", AND BROADCOM GRANTS NO WARRANTIES OF ANY
+# KIND, EXPRESS OR IMPLIED, BY STATUTE, COMMUNICATION OR OTHERWISE. BROADCOM
+# SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A SPECIFIC PURPOSE OR NONINFRINGEMENT CONCERNING THIS SOFTWARE.
+
+# boardtype 0x48E is a BCM95354gr reference design
+boardtype=0x48E
+
+# boardnum is set by the nvserial program. Don't edit it here.
+boardnum=${serno}
+
+# Board revision is 1.0
+boardrev=0x10
+
+# boardflags: (LSB on top, MSB on bottom)
+#             0 = no Bluetooth coexistence
+#             0 = GPIO 9 does not control the PA
+#             0 = does not implement GPIO 13 radio disable indication
+#             0 = does not have RSSI divider
+#             1 = YES board has RoboSwitch (in 5354)
+#             0 = OK to power down PLL and chip
+#             1 = YES can do high power CCK transmission (enables opo parameter
+#                 for power offset between CCK and OFDM)
+#             0 = NO board does not have ADMtek switch
+#             1 = YES board had VLAN capability
+#             1 = YES board supports Afterburner
+#             1 = YES board leaves PCI floating - no PCI core in the 5354
+#             0 = NO board does not have a FEM
+#             0 = NO board does not have an external LNA
+#             0 = NO board does not have high gain PA
+#             0 = NO alternate Bluetooth coexistence
+#             0 = NO do not use alternate IQ imbalance settings
+boardflags=0x0650
+
+# boardflags2 is not yet used. This is just a placeholder.
+boardflags2=0
+
+# sromrev tells the software what "version" of NVRAM is used.
+sromrev=3
+
+# MIPS clock frequency in MHz
+clkfreq=240
+
+# Frequency of the external crystal, in kHz
+xtalfreq=25000
+
+# 16MBytes of SDR SDRAM (8 Meg x 16 x 1)
+# The sdram_init value is the lower 16-bits of the memory controller's CONFIG register (offset 0x004)
+# Set external clock feedback, SDR, 16-bit interface, 512 columns,
+sdram_init=0x0002
+# The sdram_config value is the lower 16-bits of the memory controller's MEMBuf register (offset 0x010)
+# which is directly written to the SDRAM's mode register.
+# Set burst length to 2, burst type to sequential, CAS latency to 3, normal mode, burst writes.
+sdram_config=0x0032
+# Always set sdram_refresh to 0x0
+sdram_refresh=0x0
+# Always set sdram_ncdl to 0x0
+sdram_ncdl=0x0
+
+# Enable the integrated Ethernet switch (RoboSwitch)
+et0phyaddr=30
+et0mdcport=0
+# The value of 00:90:4C:C0 is for a BCM95354gr reference design.
+et0macaddr=00:90:4C:C0:${maclo}
+
+# The secret code for DDNS
+secret_code=01234567
+
+# Robo switch config (vlan0:LAN, vlan1:WAN)
+# On WL-520GU, WAN is on port 4, LAN is ports 0-3. Port 5 is the internal MII interface
+# to the Roboswitch core. It MUST be present on all VLANs. The "*" means to enable
+# this group for CFE use. Only one VLAN can have this, typically the LAN.
+# vlan0 is the LAN.
+vlan0ports=1 2 3 4 5*
+vlan0hwname=et0
+# vlan1 is the WAN. The "u" sets to NOT output vlan tags on packets going out the
+# WAN port, nor expect vlan tags on packets coming in from the WAN port. This is
+# typical for consumer products. Enterprise prodcuts might set "t" here to support
+# vlan tags over the WAN port.
+vlan1ports=0 5u
+vlan1hwname=et0
+
+# This parameter will tell the software to see the 5354s d11 core wireless i/f. It is single band 11b/g.
+# It will come up as device eth1, a.k.a wl0
+wl0id=0x4318
+
+# LAN is the wired Ethernet ports plus the Wireless 11g port - wl0
+landevs=vlan0 wl0
+
+# WAN port is on eth0
+wandevs=et0
+
+# Set default IP address and net mask for the router.
+lan_ipaddr=192.168.1.1
+lan_netmask=255.255.255.0
+
+# 5354 802.11g parameters
+# il0macaddr sets the MAC address of the 5354 wireless interface
+# The value of 00:90:4C:C1 is for a BCM95354gr reference design.
+il0macaddr=00:90:4C:C1:${maclo}
+# aa0 sets 11g antenna usage: 0 = force aux ant (ant 0), 1 = force main ant (ant 1), 2 = reserved, 3 = automatic diversity
+aa0=3
+# ag0 sets the 11g antenna gain. Lower 6 bits are interpreted as a signed number representing
+# whole dB. Hi 2 bits represent number of quarter dBs. qdB's are ALWAYS POSITIVE and are
+# added to whole dBs, so -1 whole dB and 1 qdB = 0x7F = -1dB + 0.25dB = -0.75dB. Range is
+# -32dB to +31.75 dB.
+ag0=2
+# pa0maxpwr is the maximum power the 11g PA can output for CCK modulation in units of 0.25dB
+pa0maxpwr=60
+# pa0itssi is the PA idel TSSI target value
+pa0itssit=62
+# The following three lines are the PA parameters for the 11g PA
+pa0b0=0x1068
+pa0b1=0xFA94
+pa0b2=0xFE76
+# opo is the power offset to subtract from the CCK output power to get the OFDM output power
+# units are 0.25dB
+opo=10
+# these are new parameters needed for the 5354
+bxa2g=1
+rssismf2g=0
+rssismc2g=2
+rssisav2g=2
+tri2g=78
+rxpo2g=-8
+
+# Common wireless parameters
+# ccode is the "Country Code". 0 sets "worldwide" which uses a minimum subset of channels
+# that is legal in every country. This can be changed depending upon where the board is shipped.
+ccode=0
+
+# Wireless LED GPIO mapping and behavior for the 5354 wireless interface, a.k.a: wl0
+# GPIO 0 is not used, tell the wireless driver to not use it - 11 = WL_LED_INACTIVE
+wl0gpio0=11
+# GPIO 1 is wireless activity - 2=WL_LED_ACTIVITY
+# set 0x82 as wireless led high active
+# set 0x02 as wireless led low active
+wl0gpio1=0x02
+# GPIO 2 is not used, tell the wireless driver to not use it - 11 = WL_LED_INACTIVE
+wl0gpio2=11
+# GPIO 3 is not used, tell the wireless driver to not use it - 11 = WL_LED_INACTIVE
+wl0gpio3=11
+
+# Set a short delay on boot so the CFE delays a bit before loading Linux. Allows easier S/W updates.
+boot_wait=on
+# If boot_wait is on, then "wait_time" sets the wait time from 3 to 20 seconds.
+wait_time=3
+
+# The reset button is on GPIO 2. It MUST be active low, or the software will have to be modified.
+reset_gpio=2
+
+# Bootloader variables for downloading new flash code - don't change!
+dl_ram_addr=a0001000
+os_ram_addr=80001000
+os_flash_addr=bfc40000
+scratch=a0180000
+
+# Watchdog timer in ms (0 will disable)
+watchdog=3000
+
+# Add ASUS parameters for ATE/SW 
+hardware_version=WL330GE-01-06-00-00
+regulation_domain=0x47TW
+

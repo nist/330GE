@@ -1,0 +1,126 @@
+init301.o: init301.c \
+   init301.h \
+   oem300.h \
+   oem310.h
+init301.h: \
+   osdef.h \
+   initdef.h \
+   vgatypes.h \
+   vstruct.h \
+   sis.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sisfb.h
+	@touch init301.h
+init.o: init.c \
+   init.h \
+   300vtbl.h \
+   310vtbl.h
+init.h: \
+   osdef.h \
+   initdef.h \
+   vgatypes.h \
+   vstruct.h \
+   sis.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/sisfb.h
+	@touch init.h
+osdef.h: \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/300.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/315.h)
+	@touch osdef.h
+sis_accel.o: sis_accel.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/agp_backend.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sisfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   osdef.h \
+   vgatypes.h \
+   vstruct.h \
+   sis_accel.h \
+   sis.h
+sis_accel.h: \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h
+	@touch sis_accel.h
+sis_main.o: sis_main.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/capability.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/agp_backend.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   osdef.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sisfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   vgatypes.h \
+   sis_main.h \
+   sis.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/300.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/315.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/types.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h
+sis_main.h: \
+   vstruct.h \
+   sis.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/300.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis/315.h)
+	@touch sis_main.h
+vgatypes.h: \
+   /root/WL330gE/src/linux/linux/include/linux/ioctl.h
+	@touch vgatypes.h
+.PRECIOUS:	init301.h \
+	init.h \
+	osdef.h \
+	sis_accel.h \
+	sis_main.h \
+	vgatypes.h \
+

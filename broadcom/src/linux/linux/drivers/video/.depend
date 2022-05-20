@@ -1,0 +1,1821 @@
+acornfb.o: acornfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   acornfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arch/a5k.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/32.h)
+amifb.o: amifb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-afb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-ilbm.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/amiga/ocs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/amiga/ecs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/amiga/aga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/gsp/resolver.h)
+atafb.o: atafb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h
+aty128fb.o: aty128fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ppc.h) \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h) \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/pmu.h) \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pmu.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/backlight.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bootx/text.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   aty128.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/pbook.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cntl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/memsize.h)
+au1100fb.o: au1100fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/au1000.h \
+   /root/WL330gE/src/linux/linux/include/asm/pb1100.h \
+   au1100fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/pb1100.h)
+au1100fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/hyd1100.h)
+	@touch au1100fb.h
+bwtwofb.o: bwtwofb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sun3.h)
+cgfourteenfb.o: cgfourteenfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+cgsixfb.o: cgsixfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+cgthreefb.o: cgthreefb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+chipsfb.o: chipsfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/backlight.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/pbook.h) \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pmu.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h
+clgenfb.o: clgenfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/zorro.h) \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/amiga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/all/ppc.h) \
+   /root/WL330gE/src/linux/linux/include/asm/processor.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   clgenfb.h \
+   vga.h
+controlfb.o: controlfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/cuda.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   controlfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/cuda.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bootx/text.h)
+creatorfb.o: creatorfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h
+cvisionppc.h: \
+   pm2fb.h
+	@touch cvisionppc.h
+cyber2000fb.o: cyber2000fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   cyber2000fb.h
+cyber2000fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/debug/ll.h)
+	@touch cyber2000fb.h
+cyberfb.o: cyberfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   cyberfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h
+dn_accel.h: \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h
+	@touch dn_accel.h
+dn_cfb4.o: dn_cfb4.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   dn_accel.h
+dn_cfb8.o: dn_cfb8.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   dn_accel.h
+dnfb.o: dnfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   dn_accel.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h
+dummycon.o: dummycon.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/kdev_t.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h
+epson1355fb.o: epson1355fb.c \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/superh.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/e1355/reg/base.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/e1355/fb/base.h)
+epson1356fb.o: epson1356fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/pagemap.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgalloc.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/tlb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/video/e1356fb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/au1x00.h) \
+   /root/WL330gE/src/linux/linux/include/asm/au1000.h \
+   epson1356fb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/64bit/phys/addr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/mips32.h)
+epson1356fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pb1000/crt.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pb1000/ntsc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pb1000/tft.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pb1500/crt.h)
+	@touch epson1356fb.h
+fbcmap.o: fbcmap.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h
+fbcon-afb.o: fbcon-afb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-afb.h
+fbcon.o: fbcon.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/amiga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/atari.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/apus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/vga/planes.h) \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/linux_logo.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mac.h \
+   /root/WL330gE/src/linux/linux/include/video/font.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/mac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/fontwidth8/only.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb16.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb24.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb32.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb8.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/afb.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/ilbm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/iplan2p2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/iplan2p4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/iplan2p8.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/mfb.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/hga.h)
+fbcon-cfb16.o: fbcon-cfb16.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h
+fbcon-cfb24.o: fbcon-cfb24.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h
+fbcon-cfb2.o: fbcon-cfb2.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h
+fbcon-cfb32.o: fbcon-cfb32.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h
+fbcon-cfb4.o: fbcon-cfb4.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h
+fbcon-cfb8.o: fbcon-cfb8.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+fbcon-hga.o: fbcon-hga.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-hga.h
+fbcon-ilbm.o: fbcon-ilbm.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-ilbm.h
+fbcon-iplan2p2.o: fbcon-iplan2p2.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p2.h
+fbcon-iplan2p4.o: fbcon-iplan2p4.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p4.h
+fbcon-iplan2p8.o: fbcon-iplan2p8.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-iplan2p8.h
+fbcon-mac.o: fbcon-mac.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mac.h
+fbcon-mfb.o: fbcon-mfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h
+fbcon-sti.o: fbcon-sti.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/types.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   sti/sticore.h
+fbcon-vga.o: fbcon-vga.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-vga.h
+fbcon-vga-planes.o: fbcon-vga-planes.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_buffer.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-vga-planes.h
+fbgen.o: fbgen.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h
+fbmem.o: fbmem.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/smp_lock.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/major.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/mman.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kmod.h) \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/devfs_fs_kernel.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/apus.h) \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/retinaz3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/amiga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cyber.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cyber2000.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pm2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pm3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/clgen.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/aty.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/matrox.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/aty128.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/neomagic.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/virge.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/riva.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/radeon.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/control.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/platinum.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/valkyrie.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/ct65550.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/imstt.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/s3trio.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/fm2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sis.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/trident.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/voodoo1.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/of.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/vesa.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/3dfx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sgivw.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/acorn.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/atari.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/mac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/hga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/iga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/apollo.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/q40.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/tga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/hp300.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/g364.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sa1100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sun3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/hit.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/tx3912.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/e1355.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/e1356.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pvr2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pmag/ba.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pmagb/b.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/maxine.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/au1100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/vga16.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sti.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/gsp/resolver.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/virtual.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun3.h)
+fbmon.o: fbmon.c \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+fm2fb.o: fm2fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h
+font_6x11.o: font_6x11.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+font_8x16.o: font_8x16.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+font_8x8.o: font_8x8.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+font_acorn_8x8.o: font_acorn_8x8.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/arch/acorn.h)
+font_pearl_8x8.o: font_pearl_8x8.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+fonts.o: fonts.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/apus.h) \
+   /root/WL330gE/src/linux/linux/include/video/font.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/8x8.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/8x16.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/6x11.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/mac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/sbus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/sun8x16.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/sun12x22.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb8.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb16.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb24.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb32.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/acorn/8x8.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/font/pearl/8x8.h)
+font_sun12x22.o: font_sun12x22.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+font_sun8x16.o: font_sun8x16.c \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+g364fb.o: g364fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/jazz.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+hgafb.o: hgafb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/vga.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-hga.h \
+   /root/WL330gE/src/linux/linux/include/linux/linux_logo.h
+hitfb.o: hitfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/nubus.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/hd64461/iobase.h)
+hpfb.o: hpfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/dio.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+igafb.o: igafb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   iga.h
+imsttfb.o: imsttfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ppc.h) \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/all/ppc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h)
+leofb.o: leofb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+macfb.o: macfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/nubus.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h
+macmodes.o: macmodes.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h
+maxinefb.o: maxinefb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   maxinefb.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+maxinefb.h: \
+   /root/WL330gE/src/linux/linux/include/asm/addrspace.h
+	@touch maxinefb.h
+mdacon.o: mdacon.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_buffer.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/vga.h
+modedb.o: modedb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h
+neofb.o: neofb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   neofb.h
+neofb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h)
+	@touch neofb.h
+newport_con.o: newport_con.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/newport.h \
+   /root/WL330gE/src/linux/linux/include/asm/linux_logo.h \
+   /root/WL330gE/src/linux/linux/include/video/font.h
+offb.o: offb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bootx/text.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h
+p9100fb.o: p9100fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   p9100.h
+platinumfb.o: platinumfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   platinumfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h)
+pm2fb.o: pm2fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   pm2fb.h \
+   cvisionppc.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pm2/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pm2/cvppc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pm2/fifo/disconnect.h)
+pm3fb.o: pm3fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/of.h) \
+   pm3fb.h
+pm3fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/of.h)
+	@touch pm3fb.h
+pmag-ba-fb.o: pmag-ba-fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/dec/machtype.h \
+   /root/WL330gE/src/linux/linux/include/asm/dec/tc.h \
+   pmag-ba-fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+pmagb-b-fb.o: pmagb-b-fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/dec/machtype.h \
+   /root/WL330gE/src/linux/linux/include/asm/dec/tc.h \
+   pmagb-b-fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+promcon.o: promcon.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dummy/console.h)
+pvr2fb.o: pvr2fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sh/dreamcast.h) \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/pvr2/debug.h)
+q40fb.o: q40fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h
+radeonfb.o: radeonfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h) \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/backlight.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/bootx/text.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/pmu.h) \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pmu.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   radeon.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pmac/pbook.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/all/ppc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/memsize.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/memsize/mask.h)
+retz3fb.o: retz3fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   retz3fb.h
+S3triofb.o: S3triofb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/s3blit.h
+sa1100fb.o: sa1100fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   sa1100fb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/assabet.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/h3600.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/ipaq/h3100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/brutus.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/cerf.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cerf/lcd/72/a.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cerf/lcd/57/a.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cerf/lcd/38/a.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cerf/lcd/38/b.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/freebird.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/graphicsclient.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/huw/webpanel.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/omnimeter.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/pangolin.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/stork.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/xp860.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sa1100/lart.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/freq.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h)
+sa1100fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pm.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/freq.h)
+	@touch sa1100fb.h
+sbusfb.o: sbusfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/creator.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cgsix.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cgthree.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/tcx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/leo.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/bwtwo.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cgfourteen.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/p9100.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun4.h)
+sgivwfb.o: sgivwfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   sgivwfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h)
+skeletonfb.o: skeletonfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h
+sstfb.o: sstfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/ioctl.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   sstfb.h
+sun3fb.o: sun3fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sun3x.h) \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/cgsix.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/bwtwo.h)
+tcxfb.o: tcxfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/video/sbusfb.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h
+tdfxfb.o: tdfxfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mtrr.h) \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h
+tgafb.o: tgafb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   tgafb.h
+tridentfb.o: tridentfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   tridentfb.h
+tx3912fb.o: tx3912fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/tx3912.h \
+   tx3912fb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/mfb.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb8.h)
+tx3912fb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nino/4mb.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nino/8mb.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb4.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fbcon/cfb2.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nino/16mb.h)
+	@touch tx3912fb.h
+valkyriefb.o: valkyriefb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/nvram.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/fb/compat/xpmac.h) \
+   /root/WL330gE/src/linux/linux/include/linux/adb.h \
+   /root/WL330gE/src/linux/linux/include/linux/cuda.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mac.h) \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/macmodes.h \
+   valkyriefb.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/adb/cuda.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/nvram.h)
+valkyriefb.h: \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mac.h)
+	@touch valkyriefb.h
+vesafb.o: vesafb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mac.h
+vfb.o: vfb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vmalloc.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-mfb.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb2.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb4.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb24.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h
+vga16fb.o: vga16fb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-vga-planes.h \
+   vga.h
+vgacon.o: vgacon.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/console.h \
+   /root/WL330gE/src/linux/linux/include/linux/console_struct.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/kd.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   /root/WL330gE/src/linux/linux/include/linux/selection.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/dummy/console.h)
+vga.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/amiga.h) \
+   /root/WL330gE/src/linux/linux/include/asm/vga.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h
+	@touch vga.h
+virgefb.o: virgefb.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   /root/WL330gE/src/linux/linux/include/linux/fb.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb8.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb16.h \
+   /root/WL330gE/src/linux/linux/include/video/fbcon-cfb32.h \
+   virgefb.h
+.PRECIOUS:	au1100fb.h \
+	cvisionppc.h \
+	cyber2000fb.h \
+	dn_accel.h \
+	epson1356fb.h \
+	maxinefb.h \
+	neofb.h \
+	pm3fb.h \
+	sa1100fb.h \
+	tx3912fb.h \
+	valkyriefb.h \
+	vga.h \
+

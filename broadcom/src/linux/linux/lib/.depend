@@ -1,0 +1,45 @@
+brlock.o: brlock.c \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smp.h) \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/brlock.h
+bust_spinlocks.o: bust_spinlocks.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/linux/wait.h \
+   /root/WL330gE/src/linux/linux/include/linux/vt_kern.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/vt.h)
+cmdline.o: cmdline.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+ctype.o: ctype.c \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h
+dec_and_lock.o: dec_and_lock.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/atomic.h
+dump_stack.o: dump_stack.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+rbtree.o: rbtree.c \
+   /root/WL330gE/src/linux/linux/include/linux/rbtree.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+rwsem.o: rwsem.c \
+   /root/WL330gE/src/linux/linux/include/linux/rwsem.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+rwsem-spinlock.o: rwsem-spinlock.c \
+   /root/WL330gE/src/linux/linux/include/linux/rwsem.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h
+string.o: string.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h
+vsprintf.o: vsprintf.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/asm/div64.h

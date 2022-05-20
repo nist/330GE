@@ -1,0 +1,127 @@
+csum_partial_copy.o: csum_partial_copy.c \
+   /root/WL330gE/src/linux/linux/include/net/checksum.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/asm/byteorder.h \
+   /root/WL330gE/src/linux/linux/include/asm/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h
+csum_partial.o: csum_partial.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h
+dump_tlb.o: dump_tlb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/cpu.h \
+   /root/WL330gE/src/linux/linux/include/asm/cachectl.h \
+   /root/WL330gE/src/linux/linux/include/asm/mipsregs.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/vr41xx.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/64bit/phys/addr.h)
+floppy-no.o: floppy-no.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/asm/floppy.h
+floppy-std.o: floppy-std.c \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/linkage.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/cachectl.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/floppy.h \
+   /root/WL330gE/src/linux/linux/include/asm/keyboard.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/mc146818rtc.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h
+ide-no.o: ide-no.c \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/ide.h \
+   /root/WL330gE/src/linux/linux/include/asm/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/asm/ptrace.h
+ide-std.o: ide-std.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ide.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/asm/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/asm/hdreg.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/paccess.h
+kbd-no.o: kbd-no.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/asm/keyboard.h
+kbd-std.o: kbd-std.c \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/pc_keyb.h \
+   /root/WL330gE/src/linux/linux/include/asm/keyboard.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips/ite8172.h)
+mcount.o: mcount.S \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kernprof.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kernprof/module.h)
+memcpy.o: memcpy.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/offset.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/mips64.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/little/endian.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/cpu/sb1.h)
+memset.o: memset.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/offset.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h
+promlib.o: promlib.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h
+r3k_dump_tlb.o: r3k_dump_tlb.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h \
+   /root/WL330gE/src/linux/linux/include/asm/cachectl.h \
+   /root/WL330gE/src/linux/linux/include/asm/cpu.h \
+   /root/WL330gE/src/linux/linux/include/asm/mipsregs.h \
+   /root/WL330gE/src/linux/linux/include/asm/page.h \
+   /root/WL330gE/src/linux/linux/include/asm/pgtable.h
+rtc-no.o: rtc-no.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/mc146818rtc.h
+rtc-std.o: rtc-std.c \
+   /root/WL330gE/src/linux/linux/include/linux/mc146818rtc.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+strlen_user.o: strlen_user.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/offset.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h \
+   /root/WL330gE/src/linux/linux/include/asm/sgidefs.h
+strncpy_user.o: strncpy_user.S \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/offset.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h
+strnlen_user.o: strnlen_user.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/offset.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h \
+   /root/WL330gE/src/linux/linux/include/asm/sgidefs.h
+tinycon.o: tinycon.c \
+   /root/WL330gE/src/linux/linux/include/linux/tty.h \
+   /root/WL330gE/src/linux/linux/include/asm/bootinfo.h
+watch.o: watch.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/mipsregs.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h

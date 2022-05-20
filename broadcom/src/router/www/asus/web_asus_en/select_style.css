@@ -1,0 +1,56 @@
+#selectMenumain{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10pt;
+	line-height:21px;
+	width:120px;
+	height:21px;
+	padding:0px 0px 0px 4px;
+	background:url(graph/select_menu_bg.gif) no-repeat;
+}
+#selectMenucontent{
+	border:1px solid #333;
+	width:118px;
+	font-size:10pt;
+	display:none;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-top:0px;
+	margin-left:0px;
+	position: absolute;
+	z-index:99;
+}
+
+#En{ width:118px; height:18px; background:url(graph/english_1.gif) #FFFFFF no-repeat;}
+#En:hover { background:url(graph/english_2.gif) #0A246A no-repeat;}
+.En {width:118px; height:18px; background:url(graph/english_1.gif) #FFFFFF no-repeat;}
+.En { width:100%; height:18px; background:url(graph/english_1.gif) no-repeat;}
+.En:hover{ background:url(graph/english_2.gif) #0A246A no-repeat;}
+
+#Tc{ width:118px; height:18px; background:url(graph/chinese_1.gif) #FFFFFF no-repeat;}
+#Tc:hover { background:url(graph/chinese_2.gif) #0A246A no-repeat;}
+.Tc {width:118px; height:18px; background:url(graph/chinese_1.gif) #FFFFFF no-repeat;}
+.Tc { width:100%; height:18px; background:url(graph/chinese_1.gif) no-repeat;}
+.Tc:hover{ background:url(graph/chinese_2.gif) #0A246A no-repeat;}
+
+#Sc{ width:118px; height:18px; background:url(graph/schinese_1.gif) #FFFFFF no-repeat;}
+#Sc:hover { background:url(graph/schinese_2.gif) #0A246A no-repeat;}
+.Sc {width:118px; height:18px; background:url(graph/schinese_1.gif) #FFFFFF no-repeat;}
+.Sc { width:100%; height:18px; background:url(graph/schinese_1.gif) no-repeat;}
+.Sc:hover{ background:url(graph/schinese_2.gif) #0A246A no-repeat;}
+
+#De{ width:118px; height:18px; background:url(graph/german_1.gif) #FFFFFF no-repeat;}
+#De:hover { background:url(graph/german_2.gif) #0A246A no-repeat;}
+.De {width:118px; height:18px; background:url(graph/german_1.gif) #FFFFFF no-repeat;}
+.De { width:100%; height:18px; background:url(graph/german_1.gif) no-repeat;}
+.De:hover{ background:url(graph/german_2.gif) #0A246A no-repeat;}
+
+#Jp{ width:118px; height:18px; background:url(graph/japanese_1.gif) #FFFFFF no-repeat;}
+#Jp:hover { background:url(graph/japanese_2.gif) #0A246A no-repeat;}
+.Jp {width:118px; height:18px; background:url(graph/japanese_1.gif) #FFFFFF no-repeat;}
+.Jp { width:100%; height:18px; background:url(graph/japanese_1.gif) no-repeat;}
+.Jp:hover{ background:url(graph/japanese_2.gif) #0A246A no-repeat;}
+
+#Tr{ width:118px; height:18px; background:url(graph/turkish_1.gif) #FFFFFF no-repeat;}
+#Tr:hover { background:url(graph/turkish_2.gif) #0A246A no-repeat;}
+.Tr {width:118px; height:18px; background:url(graph/turkish_1.gif) #FFFFFF no-repeat;}
+.Tr { width:100%; height:18px; background:url(graph/turkish_1.gif) no-repeat;}
+.Tr:hover{ background:url(graph/turkish_2.gif) #0A246A no-repeat;}

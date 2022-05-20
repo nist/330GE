@@ -1,0 +1,5 @@
+obj-$(CONFIG_ROBO) += robo
+obj-$(CONFIG_PPTP_CLIENT) += pptpclient
+
+# These libs are dependenices for rc and httpd
+EXTRA_LIBS += swlib

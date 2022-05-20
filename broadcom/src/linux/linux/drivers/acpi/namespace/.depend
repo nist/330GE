@@ -1,0 +1,74 @@
+nsaccess.o: nsaccess.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdispat.h
+nsalloc.o: nsalloc.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h
+nsdump.o: nsdump.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acparser.h
+nseval.o: nseval.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acparser.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+nsinit.o: nsinit.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdispat.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h
+nsload.o: nsload.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acparser.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdispat.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdebug.h
+nsnames.o: nsnames.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+nsobject.o: nsobject.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h
+nssearch.o: nssearch.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+nsutils.o: nsutils.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/actables.h
+nswalk.o: nswalk.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h
+nsxfname.o: nsxfname.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/amlcode.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acparser.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdispat.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acevents.h
+nsxfobj.o: nsxfobj.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acinterp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acnamesp.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acdispat.h

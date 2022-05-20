@@ -1,0 +1,26 @@
+pr.o: pr.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/pr.h
+pr_osl.o: pr_osl.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/pr.h
+prperf.o: prperf.c \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/pr.h
+prpower.o: prpower.c \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/pm.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/include/acpi.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/bm.h \
+   /root/WL330gE/src/linux/linux/drivers/acpi/ospm/include/pr.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/smp.h)

@@ -1,0 +1,68 @@
+hil_kbd.o: hil_kbd.c \
+   /root/WL330gE/src/linux/linux/include/linux/hil.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/serio.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h
+hilkbd.o: hilkbd.c \
+   /root/WL330gE/src/linux/linux/include/linux/pci_ids.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/irq.h \
+   /root/WL330gE/src/linux/linux/include/linux/hil.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parisc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/hp300.h)
+hil_mlc.o: hil_mlc.c \
+   /root/WL330gE/src/linux/linux/include/linux/hil_mlc.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h
+hil_ptr.o: hil_ptr.c \
+   /root/WL330gE/src/linux/linux/include/linux/hil.h \
+   /root/WL330gE/src/linux/linux/include/linux/input.h \
+   /root/WL330gE/src/linux/linux/include/linux/serio.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h
+hp_sdc.o: hp_sdc.c \
+   /root/WL330gE/src/linux/linux/include/linux/hp_sdc.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/hil.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/system.h
+hp_sdc_mlc.o: hp_sdc_mlc.c \
+   /root/WL330gE/src/linux/linux/include/linux/hil_mlc.h \
+   /root/WL330gE/src/linux/linux/include/linux/hp_sdc.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+hp_sdc_rtc.o: hp_sdc_rtc.c \
+   /root/WL330gE/src/linux/linux/include/linux/hp_sdc.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/time.h \
+   /root/WL330gE/src/linux/linux/include/linux/miscdevice.h \
+   /root/WL330gE/src/linux/linux/include/linux/proc_fs.h \
+   /root/WL330gE/src/linux/linux/include/linux/poll.h \
+   /root/WL330gE/src/linux/linux/include/linux/rtc.h

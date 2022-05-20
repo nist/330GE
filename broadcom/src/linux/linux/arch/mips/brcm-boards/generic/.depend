@@ -1,0 +1,21 @@
+gdb_hook.o: gdb_hook.c \
+   /root/WL330gE/src/linux/linux/include/linux/serialP.h \
+   /root/WL330gE/src/linux/linux/include/linux/serial_reg.h \
+   /root/WL330gE/src/linux/linux/include/asm/serial.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+int-handler.o: int-handler.S \
+   /root/WL330gE/src/linux/linux/include/asm/asm.h \
+   /root/WL330gE/src/linux/linux/include/asm/mipsregs.h \
+   /root/WL330gE/src/linux/linux/include/asm/regdef.h \
+   /root/WL330gE/src/linux/linux/include/asm/stackframe.h
+irq.o: irq.c \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/mipsregs.h \
+   /root/WL330gE/src/linux/linux/include/asm/gdb-stub.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/kernprof.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/remote/debug.h)

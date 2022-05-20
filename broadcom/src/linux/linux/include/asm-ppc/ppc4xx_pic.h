@@ -1,0 +1,45 @@
+/*
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307 USA
+ */
+/*
+ * BK Id: SCCS/s.ppc4xx_pic.h 1.8 06/15/01 13:56:56 paulus
+ */
+/*
+ *
+ *    Copyright (c) 1999 Grant Erickson <grant@lcse.umn.edu>
+ *
+ *    Module name: ppc4xx_pic.h
+ *
+ *    Description:
+ *      Interrupt controller driver for PowerPC 4xx-based processors.
+ */
+
+#ifndef	__PPC4XX_PIC_H__
+#define	__PPC4XX_PIC_H__
+
+#include <linux/config.h>
+
+/* External Global Variables */
+
+extern struct hw_interrupt_type *ppc4xx_pic;
+
+
+/* Function Prototypes */
+
+extern void	 ppc4xx_pic_init(void);
+extern int	 ppc4xx_pic_get_irq(struct pt_regs *regs);
+
+#endif /* __PPC4XX_PIC_H__ */

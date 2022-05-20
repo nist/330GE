@@ -1,0 +1,84 @@
+buffer.o: buffer.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/mm.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/slab.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/blkdev.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h
+cache.o: cache.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/kernel.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/errno.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/stat.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h
+cvf.o: cvf.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/sched.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs_sb.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h \
+   $(wildcard /root/5354-WL520GU/src/linux/linux/include/config/kmod.h) \
+   /root/5354-WL520GU/src/linux/linux/include/linux/kmod.h
+dir.o: dir.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/nls.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/kernel.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/errno.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/stat.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/ioctl.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/dirent.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/mm.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/ctype.h \
+   /root/5354-WL520GU/src/linux/linux/include/asm/uaccess.h
+fatfs_syms.o: fatfs_syms.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/module.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/init.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/mm.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h
+file.o: file.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/sched.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/locks.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/errno.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fcntl.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/stat.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/pagemap.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h \
+   /root/5354-WL520GU/src/linux/linux/include/asm/uaccess.h \
+   /root/5354-WL520GU/src/linux/linux/include/asm/system.h
+inode.o: inode.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/module.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/nls.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/kernel.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/sched.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/errno.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/bitops.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/major.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/blkdev.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/stat.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/locks.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fat_cvf.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/slab.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/smp_lock.h \
+   /root/5354-WL520GU/src/linux/linux/include/asm/uaccess.h \
+   /root/5354-WL520GU/src/linux/linux/include/asm/unaligned.h \
+   $(wildcard /root/5354-WL520GU/src/linux/linux/include/config/nls/default.h)
+misc.o: misc.c \
+   /root/5354-WL520GU/src/linux/linux/include/linux/fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/msdos_fs.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/sched.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/kernel.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/errno.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/string.h \
+   /root/5354-WL520GU/src/linux/linux/include/linux/stat.h

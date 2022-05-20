@@ -1,0 +1,27 @@
+#!/bin/bash
+cd src/linux/linux/include
+ln -s asm-mips asm
+cd ../../../router/busybox/
+ln -s configs/router.h Config.h
+ln -s busybox.lineo.com/index.html docs/BusyBox.html
+cd ../pppd/pppd/plugins/radius/
+ln -s Makefile.linux Makefile
+cd ../../../../pppd.mppe/pppd/plugins/radius/
+ln -s Makefile.linux Makefile
+cd ../../../../pppd.patch/pppd/plugins
+ln -s Makefile.linux Makefile
+cd radius
+ln -s Makefile.linux Makefile
+cd ../rp-pppoe
+ln -s Makefile.linux Makefile
+cd ../../../../www/asus
+ln -s web_asus_en web_asus_tw
+ln -s web_asus_en web_asus_cn
+ln -s web_asus_en web_asus_kr
+cd ../../
+tar zxvf prebuilt/libbcmcrypto.tgz
+tar zxvf prebuilt/libcrypto.tgz
+cd mipsel
+rm -rf install
+tar zxvf ../prebuilt/install.tgz
+

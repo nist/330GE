@@ -1,0 +1,183 @@
+daisy.o: daisy.c \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h
+ieee1284.o: ieee1284.c \
+   /root/WL330gE/src/linux/linux/include/linux/threads.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/lp/console.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h)
+ieee1284_ops.o: ieee1284_ops.c \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/lp/console.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h)
+init.o: init.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/threads.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/pc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/amiga.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/mfc3.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/atari.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/arc.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/sunbpp.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h)
+parport_amiga.o: parport_amiga.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+parport_arc.o: parport_arc.c \
+   /root/WL330gE/src/linux/linux/include/linux/threads.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/asm/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h
+parport_atari.o: parport_atari.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h
+parport_cs.o: parport_cs.c \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/version.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/timer.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport_pc.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/version.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs_types.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cs.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cistpl.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ds.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/cisreg.h \
+   /root/WL330gE/src/linux/linux/include/pcmcia/ciscode.h
+parport_gsc.o: parport_gsc.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h
+parport_mfc3.o: parport_mfc3.c \
+   multiface.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/mc6821.h \
+   /root/WL330gE/src/linux/linux/include/linux/zorro.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h
+parport_pc.o: parport_pc.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport_pc.h \
+   /root/WL330gE/src/linux/linux/include/asm/parport.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/pc/fifo.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/pc/superio.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/pci.h)
+parport_serial.o: parport_serial.c \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/pci.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport_pc.h \
+   /root/WL330gE/src/linux/linux/include/linux/serial.h \
+   /root/WL330gE/src/linux/linux/include/linux/serialP.h \
+   /root/WL330gE/src/linux/linux/include/linux/list.h \
+   /root/WL330gE/src/linux/linux/include/asm/serial.h
+parport_sunbpp.o: parport_sunbpp.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/init.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/asm/ptrace.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/asm/io.h \
+   /root/WL330gE/src/linux/linux/include/asm/dma.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h
+probe.o: probe.c \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h
+procfs.o: procfs.c \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/ctype.h \
+   /root/WL330gE/src/linux/linux/include/linux/sysctl.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/sysctl.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/proc/fs.h) \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h)
+share.o: share.c \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h \
+   /root/WL330gE/src/linux/linux/include/linux/threads.h \
+   /root/WL330gE/src/linux/linux/include/linux/parport.h \
+   /root/WL330gE/src/linux/linux/include/linux/delay.h \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/interrupt.h \
+   /root/WL330gE/src/linux/linux/include/linux/ioport.h \
+   /root/WL330gE/src/linux/linux/include/linux/kernel.h \
+   /root/WL330gE/src/linux/linux/include/linux/slab.h \
+   /root/WL330gE/src/linux/linux/include/linux/sched.h \
+   /root/WL330gE/src/linux/linux/include/linux/kmod.h \
+   /root/WL330gE/src/linux/linux/include/linux/spinlock.h \
+   /root/WL330gE/src/linux/linux/include/asm/irq.h \
+   $(wildcard /root/WL330gE/src/linux/linux/include/config/parport/1284.h)

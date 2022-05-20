@@ -1,0 +1,30 @@
+lzrw3.o: lzrw3.c \
+   ../compressor/lzrw3.h
+lzrw3.h: \
+   /root/WL330gE/src/linux/linux/include/linux/types.h \
+   /root/WL330gE/src/linux/linux/include/linux/string.h
+	@touch lzrw3.h
+zftape-compress.o: zftape-compress.c \
+   /root/WL330gE/src/linux/linux/include/linux/errno.h \
+   /root/WL330gE/src/linux/linux/include/linux/mm.h \
+   /root/WL330gE/src/linux/linux/include/linux/module.h \
+   /root/WL330gE/src/linux/linux/include/linux/zftape.h \
+   /root/WL330gE/src/linux/linux/include/asm/uaccess.h \
+   /root/WL330gE/src/linux/linux/include/asm/segment.h \
+   ../zftape/zftape-init.h \
+   ../zftape/zftape-eof.h \
+   ../zftape/zftape-ctl.h \
+   ../zftape/zftape-write.h \
+   ../zftape/zftape-read.h \
+   ../zftape/zftape-rw.h \
+   ../compressor/zftape-compress.h \
+   ../zftape/zftape-vtbl.h \
+   ../compressor/lzrw3.h
+zftape-compress.h: \
+   ../zftape/zftape-buffers.h \
+   ../zftape/zftape-vtbl.h \
+   ../compressor/lzrw3.h
+	@touch zftape-compress.h
+.PRECIOUS:	lzrw3.h \
+	zftape-compress.h \
+
